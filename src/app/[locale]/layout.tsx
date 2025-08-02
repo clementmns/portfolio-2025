@@ -4,6 +4,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "../../i18n/routing";
 import { notFound } from "next/navigation";
 import { Space_Grotesk } from "next/font/google";
+import Footer from "../../components/layouts/footer/footer";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -29,7 +30,10 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${spaceGrotesk.className} antialiased`}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

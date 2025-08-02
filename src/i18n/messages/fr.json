@@ -2,5 +2,11 @@
   "HomePage": {
     "title": "Bonjour le monde !",
     "about": "Aller à la page à propos"
+  },
+  "Footer": {
+    "title": "N'hésitez pas à m'envoyer un e-mail ou à vous connecter avec moi sur LinkedIn 🤟",
+    "email": "contact@clementomnes.dev",
+    "message": "Fait avec passion, et beaucoup de café ...",
+    "copyright": "Clément OMNÈS"
   }
 }
