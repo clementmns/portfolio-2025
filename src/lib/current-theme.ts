@@ -1,7 +1,7 @@
 "use server";
 
 import { cookies } from "next/headers";
-import { fallbackTheme, Theme } from "../types/themes";
+import { fallbackTheme, Theme } from "@/types/themes";
 
 export async function getCurrentTheme(): Promise<Theme> {
   const cookieStore = await cookies();

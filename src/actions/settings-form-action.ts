@@ -5,7 +5,7 @@ import type { Theme } from "@/types/themes";
 import { fallbackLocale } from "@/types/locales";
 import { fallbackTheme } from "@/types/themes";
 import { cookies, headers } from "next/headers";
-import { redirect } from "../i18n/navigation";
+import { redirect } from "@/i18n/navigation";
 
 export async function settingsFormAction(formData: FormData) {
   const cookieStore = await cookies();

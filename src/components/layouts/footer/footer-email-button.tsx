@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { Button } from "../../ui/button";
+import { Button } from "@/components/ui/button";
 import { CopyIcon, CheckIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 

@@ -1,4 +1,4 @@
-import { SettingsDialog } from "../../settings/settings-dialog";
+import { SettingsDialog } from "@/components/settings/settings-dialog";
 
 export default function Header() {
   return (

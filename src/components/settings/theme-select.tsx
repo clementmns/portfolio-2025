@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/select";
 import { useTranslations } from "next-intl";
 import { BoltIcon, MoonIcon, SunIcon } from "lucide-react";
-import { Theme } from "../../types/themes";
+import { Theme } from "@/types/themes";
 
 export function ThemeSelect() {
   const t = useTranslations("Header");
