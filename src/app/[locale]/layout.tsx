@@ -5,6 +5,9 @@ import { routing } from "../../i18n/routing";
 import { notFound } from "next/navigation";
 import { Space_Grotesk } from "next/font/google";
 import Footer from "../../components/layouts/footer/footer";
+import Header from "../../components/layouts/header/header";
+import { getCurrentTheme } from "@/lib/current-theme";
+import ThemeProvider from "@/components/providers/theme-provider";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -22,17 +25,22 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>) {
+  const theme = await getCurrentTheme();
+
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${spaceGrotesk.className} antialiased`}>
         <NextIntlClientProvider>
-          {children}
-          <Footer />
+          <ThemeProvider initialTheme={theme}>
+            <Header />
+            {children}
+            <Footer />
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

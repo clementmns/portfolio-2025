@@ -3,6 +3,23 @@
     "title": "Bonjour le monde !",
     "about": "Aller à la page à propos"
   },
+  "Generic": {
+    "buttonSave": "Sauvegarder les changements",
+    "buttonCancel": "Annuler"
+  },
+  "Header": {
+    "formLangLabel": "Langue",
+    "formLangPlaceholder": "Sélectionner la Langue",
+    "formLangOptionEnglish": "Anglais",
+    "formLangOptionFrench": "Français",
+    "formThemeLabel": "Thème",
+    "formThemePlaceholder": "Sélectionner le Thème",
+    "formThemeOptionLight": "Clair",
+    "formThemeOptionDark": "Sombre",
+    "formThemeOptionSystem": "Système",
+    "settingsDialogTitle": "Modifier les préférences",
+    "settingsDialogDescription": "Modifiez vos préférences ici. Cliquez sur sauvegarder lorsque vous avez terminé."
+  },
   "Footer": {
     "title": "N'hésitez pas à m'envoyer un e-mail ou à vous connecter avec moi sur LinkedIn 🤟",
     "email": "contact@clementomnes.dev",

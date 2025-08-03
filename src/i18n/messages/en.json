@@ -3,10 +3,26 @@
     "title": "Hello world!",
     "about": "Go to the about page"
   },
+  "Generic": {
+    "buttonSave": "Save changes",
+    "buttonCancel": "Cancel"
+  },
+  "Header": {
+    "formLangLabel": "Language",
+    "formLangPlaceholder": "Select your Language",
+    "formLangOptionEnglish": "English",
+    "formLangOptionFrench": "French",
+    "formThemeLabel": "Theme",
+    "formThemePlaceholder": "Select your Theme",
+    "formThemeOptionLight": "Light",
+    "formThemeOptionDark": "Dark",
+    "formThemeOptionSystem": "System",
+    "settingsDialogTitle": "Edit your preferences",
+    "settingsDialogDescription": "Change your preferences here. Click save when you're done."
+  },
   "Footer": {
     "title": "Don't hesitate to drop me an email or connect with me on LinkedIn 🤟",
     "email": "contact@clementomnes.dev",
-    "emailCopy": "Click to copy :)",
     "message": "Made with passion, and a lot of coffee ...",
     "copyright": "Clément OMNÈS"
   }
