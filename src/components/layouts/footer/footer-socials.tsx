@@ -12,7 +12,7 @@ export function FooterSocials({
     <div className="flex items-center justify-center sm:justify-end space-x-2">
       <Button
         className="group"
-        variant="ghost"
+        variant="outline"
         size="icon"
         onClick={onGithub}
         aria-label="GitHub"
@@ -21,7 +21,7 @@ export function FooterSocials({
       </Button>
       <Button
         className="group"
-        variant="ghost"
+        variant="outline"
         size="icon"
         onClick={onLinkedin}
         aria-label="LinkedIn"
