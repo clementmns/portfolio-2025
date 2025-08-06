@@ -17,6 +17,12 @@
     "formThemeOptionLight": "Light",
     "formThemeOptionDark": "Dark",
     "formThemeOptionSystem": "System",
+    "formFontLabel": "Font",
+    "formFontPlaceholder": "Select your Font",
+    "formFontOptionSpaceGrotesk": "Space Grotesk",
+    "formFontOptionGeist": "Geist",
+    "formFontOptionNoto": "Noto",
+    "formFontOptionOpenDyslexic": "Open Dyslexic",
     "settingsDialogTitle": "Edit your preferences",
     "settingsDialogDescription": "Change your preferences here. Click save when you're done."
   },

@@ -17,6 +17,12 @@
     "formThemeOptionLight": "Clair",
     "formThemeOptionDark": "Sombre",
     "formThemeOptionSystem": "Système",
+    "formFontLabel": "Typographie",
+    "formFontPlaceholder": "Sélectionner la typographie",
+    "formFontOptionSpaceGrotesk": "Space Grotesk",
+    "formFontOptionGeist": "Geist",
+    "formFontOptionNoto": "Noto",
+    "formFontOptionOpenDyslexic": "Open Dyslexic",
     "settingsDialogTitle": "Modifier les préférences",
     "settingsDialogDescription": "Modifiez vos préférences ici. Cliquez sur sauvegarder lorsque vous avez terminé."
   },

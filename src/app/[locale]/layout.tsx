@@ -3,15 +3,12 @@ import "./globals.css";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
-import { Space_Grotesk } from "next/font/google";
+import { fontClassMap } from "@/lib/fonts";
 import Footer from "@/components/layouts/footer/footer";
 import Header from "@/components/layouts/header/header";
 import { getCurrentTheme } from "@/lib/current-theme";
+import { getCurrentFont } from "@/lib/current-font";
 import ThemeProvider from "@/components/providers/theme-provider";
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,6 +23,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const theme = await getCurrentTheme();
+  const font = await getCurrentFont();
 
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
@@ -34,7 +32,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${spaceGrotesk.className} antialiased`}>
+      <body className={`${fontClassMap[font]} antialiased`}>
         <NextIntlClientProvider>
           <ThemeProvider initialTheme={theme}>
             <Header />

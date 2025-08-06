@@ -3,8 +3,9 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import { LangSelect } from "./lang-select";
-import { settingsFormAction } from "@/actions/settings-form-action";
 import { ThemeSelect } from "./theme-select";
+import { FontSelect } from "./font-select";
+import { settingsFormAction } from "@/actions/settings-form-action";
 
 export function SettingsForm({ className }: React.ComponentProps<"form">) {
   const t = useTranslations("Header");
@@ -22,6 +23,10 @@ export function SettingsForm({ className }: React.ComponentProps<"form">) {
       <div className="grid gap-3">
         <Label htmlFor="theme">{t("formThemeLabel")}</Label>
         <ThemeSelect />
+      </div>
+      <div className="grid gap-3">
+        <Label htmlFor="font">{t("formFontLabel")}</Label>
+        <FontSelect />
       </div>
       <Button type="submit">{tg("buttonSave")}</Button>
     </form>
