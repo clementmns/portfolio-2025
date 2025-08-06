@@ -17,22 +17,22 @@ export const noto = Noto_Sans({
 export const openDyslexic = localFont({
   src: [
     {
-      path: "../fonts/OpenDyslexic-Regular.otf",
+      path: "../assets/fonts/OpenDyslexic-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../fonts/OpenDyslexic-Italic.otf",
+      path: "../assets/fonts/OpenDyslexic-Italic.otf",
       weight: "400",
       style: "italic",
     },
     {
-      path: "../fonts/OpenDyslexic-Bold.otf",
+      path: "../assets/fonts/OpenDyslexic-Bold.otf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../fonts/OpenDyslexic-Bold-Italic.otf",
+      path: "../assets/fonts/OpenDyslexic-Bold-Italic.otf",
       weight: "700",
       style: "italic",
     },
