@@ -12,13 +12,17 @@ import { Theme } from "@/types/themes";
 
 export function ThemeSelect() {
   const t = useTranslations("Header");
-  const htmlClass =
-    typeof window !== "undefined" ? document.documentElement.className : "";
   let theme: Theme = "system";
-  if (htmlClass.includes("dark")) {
-    theme = "dark";
-  } else if (htmlClass.includes("light")) {
-    theme = "light";
+  if (typeof document !== "undefined") {
+    const match = document.cookie.match(/(?:^|; )user-theme=([^;]*)/);
+    const cookieTheme = match?.[1] as Theme | undefined;
+    if (
+      cookieTheme === "dark" ||
+      cookieTheme === "light" ||
+      cookieTheme === "system"
+    ) {
+      theme = cookieTheme;
+    }
   }
 
   return (

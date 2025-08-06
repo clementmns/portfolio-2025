@@ -12,15 +12,18 @@ import { fontClassMap } from "../../lib/fonts";
 
 export function FontSelect() {
   const t = useTranslations("Header");
-  const bodyClass =
-    typeof window !== "undefined" ? document.body.className : "";
   let font: Font = "spaceGrotesk";
-  if (bodyClass.includes(fontClassMap["geist"])) {
-    font = "geist";
-  } else if (bodyClass.includes(fontClassMap["openDyslexic"])) {
-    font = "openDyslexic";
-  } else if (bodyClass.includes(fontClassMap["noto"])) {
-    font = "noto";
+  if (typeof document !== "undefined") {
+    const match = document.cookie.match(/(?:^|; )user-font=([^;]*)/);
+    const cookieFont = match?.[1] as Font | undefined;
+    if (
+      cookieFont === "spaceGrotesk" ||
+      cookieFont === "geist" ||
+      cookieFont === "noto" ||
+      cookieFont === "openDyslexic"
+    ) {
+      font = cookieFont;
+    }
   }
 
   return (
