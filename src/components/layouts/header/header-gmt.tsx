@@ -8,14 +8,22 @@ import { useEffect, useState } from "react";
 export default function GMT() {
   const locale = (useLocale() as Locale) || fallbackLocale;
   const [now, setNow] = useState<Date>(new Date());
+  const [mounted, setMounted] = useState(false);
   const timeZone = "Europe/Paris";
 
   useEffect(() => {
+    setMounted(true);
     const interval = setInterval(() => {
       setNow(new Date());
     }, 1000);
     return () => clearInterval(interval);
   }, []);
+
+  if (!mounted) {
+    return (
+      <p className="text-sm font-medium whitespace-nowrap font-mono">&nbsp;</p>
+    );
+  }
 
   const time = now.toLocaleTimeString(locale, {
     hour: "2-digit",
