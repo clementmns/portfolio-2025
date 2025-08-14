@@ -3,32 +3,34 @@
 import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { CopyIcon, CheckIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
 
-export function FooterEmailButton() {
-  const t = useTranslations("Footer");
+export function EmailButton({
+  text,
+  ...props
+}: { text?: string } & React.ComponentProps<typeof Button>) {
   const [copied, setCopied] = useState(false);
 
   const handleEmailClick = useCallback(async () => {
     try {
-      await navigator.clipboard.writeText(t("email"));
+      await navigator.clipboard.writeText("contact@clementomnes.dev");
       setCopied(true);
       setTimeout(() => setCopied(false), 1000);
     } catch {
-      window.location.href = `mailto:${t("email")}`;
+      window.location.href = "mailto:contact@clementomnes.dev";
     }
-  }, [t]);
+  }, []);
 
   return (
     <Button
+      {...props}
       onClick={handleEmailClick}
       className={[
         "group w-full sm:w-auto transition-transform duration-150",
         copied ? "scale-95" : "scale-100",
       ].join(" ")}
-      aria-label={t("email")}
+      aria-label={text || "contact@clementomnes.dev"}
     >
-      {t("email")}
+      {text || "contact@clementomnes.dev"}
       <span className="ml-2 relative size-4 inline-block align-middle">
         <CopyIcon
           className={[

@@ -24,7 +24,21 @@
     "formFontOptionNoto": "Noto",
     "formFontOptionOpenDyslexic": "Open Dyslexic",
     "settingsDialogTitle": "Edit your preferences",
-    "settingsDialogDescription": "Change your preferences here. Click save when you're done."
+    "settingsDialogDescription": "Change your preferences here. Click save when you're done.",
+    "buttonLabel": "Let's Work Together"
+  },
+  "LandingHero": {
+    "currentlyWorkingAt": "Currently working at",
+    "heroTitle": "Hi 👋, I'm Clément",
+    "heroName": "Clément",
+    "yrs": "yrs",
+    "heroDescription": "Full-stack developer and Software Engineering student. Passionate about building elegant applications, streamlining workflows, and solving complex problems with clean, efficient code. Always eager to learn new technologies and tackle exciting challenges.",
+    "heroStack": "TypeScript · React/Next.js · Node.js/Nest.js · SQL/NOSQL · Java/Spring",
+    "viewProjects": "View projects",
+    "copyEmail": "Copy email",
+    "highlightJavaReact": "I specialize in Java and React development.",
+    "highlightProblemSolving": "I excel at solving complex problems.",
+    "highlightArchitecture": "I design maintainable architectures."
   },
   "Footer": {
     "title": "Don't hesitate to drop me an email or connect with me on LinkedIn 🤟",

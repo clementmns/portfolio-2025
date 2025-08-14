@@ -31,12 +31,6 @@ export default function GMT() {
     second: "2-digit",
     timeZone,
   });
-  const date = now.toLocaleDateString(locale, {
-    weekday: "short",
-    month: "short",
-    day: "numeric",
-    timeZone,
-  });
 
   const offset =
     new Date()
@@ -48,6 +42,6 @@ export default function GMT() {
   const displayedTimeZoneName = `GMT${offset}`;
 
   return (
-    <p className="text-sm font-medium whitespace-nowrap font-mono">{`${displayedTimeZoneName} / ${time} - ${date}`}</p>
+    <p className="text-sm font-medium whitespace-nowrap font-mono">{`${displayedTimeZoneName} / ${time}`}</p>
   );
 }
