@@ -21,7 +21,9 @@ export default function GMT() {
 
   if (!mounted) {
     return (
-      <p className="text-sm font-medium whitespace-nowrap font-mono">&nbsp;</p>
+      <p className="text-sm font-medium whitespace-nowrap font-mono">
+        Loading time...
+      </p>
     );
   }
 

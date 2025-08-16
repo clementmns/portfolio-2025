@@ -38,13 +38,13 @@ export default function LandingHero() {
       />
       <DotPattern
         aria-hidden
-        className="text-neutral-300/40 [mask-image:radial-gradient(60%_60%_at_50%_40%,black,transparent)]"
+        className=" [mask-image:radial-gradient(60%_60%_at_50%_40%,black,transparent)]"
         width={24}
         height={24}
         cx={1}
         cy={1}
         cr={1}
-        glow={false}
+        glow={true}
       />
 
       <div className="relative z-10 py-0 sm:py-16 md:py-24 w-full">
