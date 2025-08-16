@@ -32,6 +32,14 @@ export function SettingsDialog() {
   const t = useTranslations("Header");
   const tg = useTranslations("Generic");
 
+  React.useEffect(() => {
+    function handler() {
+      setOpen(true);
+    }
+    window.addEventListener("open-settings", handler);
+    return () => window.removeEventListener("open-settings", handler);
+  }, []);
+
   if (isDesktop) {
     return (
       <Dialog open={open} onOpenChange={setOpen}>

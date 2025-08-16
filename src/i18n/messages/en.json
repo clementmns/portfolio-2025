@@ -5,7 +5,20 @@
   },
   "Generic": {
     "buttonSave": "Save changes",
-    "buttonCancel": "Cancel"
+    "buttonCancel": "Cancel",
+    "settings": "Settings",
+    "appearance": "Appearance",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "language": "Language",
+    "actionLightMode": "Switch to Light Mode",
+    "actionDarkMode": "Switch to Dark Mode",
+    "commandPlaceholder": "Type a command or search...",
+    "noResults": "No results",
+    "hintNavigate": "↑↓ to navigate • Enter to run",
+    "hintClose": "Esc to close",
+    "gotoProjects": "Go to Projects",
+    "copyEmail": "Copy Email"
   },
   "Header": {
     "formLangLabel": "Language",
@@ -25,7 +38,8 @@
     "formFontOptionOpenDyslexic": "Open Dyslexic",
     "settingsDialogTitle": "Edit your preferences",
     "settingsDialogDescription": "Change your preferences here. Click save when you're done.",
-    "buttonLabel": "Let's Work Together"
+    "buttonLabel": "Let's Work Together",
+    "commandPalette": "Command Palette"
   },
   "LandingHero": {
     "currentlyWorkingAt": "Currently working at",

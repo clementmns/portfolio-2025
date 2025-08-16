@@ -29,24 +29,16 @@ export default function LandingHero() {
 
   return (
     <section
-      className="relative w-full min-h-[85svh] flex items-center"
+      className="relative w-full min-h-[100svh] flex items-center"
       aria-labelledby="hero-title"
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-24 left-1/2 h-[40rem] w-[70vw] -translate-x-1/2 rounded-full bg-primary/20 blur-3xl opacity-30 dark:opacity-20 -z-1000"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute top-1/3 right-0 h-64 w-64 bg-gradient-to-br from-primary/20 to-transparent blur-3xl opacity-40 dark:opacity-20"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute bottom-0 left-0 h-72 w-72 bg-gradient-to-tr from-orange-500/10 to-transparent blur-3xl opacity-50 dark:opacity-30"
+        className="pointer-events-none -top-60 absolute inset-0 h-[80%] w-full rounded-full bg-primary/20 blur-3xl opacity-30 -z-1000"
       />
       <DotPattern
         aria-hidden
-        className="text-neutral-300/40 dark:text-neutral-700/40 [mask-image:radial-gradient(60%_60%_at_50%_40%,black,transparent)]"
+        className="text-neutral-300/40 [mask-image:radial-gradient(60%_60%_at_50%_40%,black,transparent)]"
         width={24}
         height={24}
         cx={1}

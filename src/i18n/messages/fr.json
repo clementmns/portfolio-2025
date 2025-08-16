@@ -5,7 +5,20 @@
   },
   "Generic": {
     "buttonSave": "Sauvegarder les changements",
-    "buttonCancel": "Annuler"
+    "buttonCancel": "Annuler",
+    "settings": "Paramètres",
+    "appearance": "Apparence",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "language": "Langue",
+    "actionLightMode": "Passer en mode clair",
+    "actionDarkMode": "Passer en mode sombre",
+    "commandPlaceholder": "Tapez une commande ou recherchez...",
+    "noResults": "Aucun résultat",
+    "hintNavigate": "↑↓ naviguer • Entrée exécuter",
+    "hintClose": "Échap fermer",
+    "gotoProjects": "Aller aux Projets",
+    "copyEmail": "Copier l'email"
   },
   "Header": {
     "formLangLabel": "Langue",
@@ -24,7 +37,8 @@
     "formFontOptionNoto": "Noto",
     "formFontOptionOpenDyslexic": "Open Dyslexic",
     "settingsDialogTitle": "Modifier les préférences",
-    "settingsDialogDescription": "Modifiez vos préférences ici. Cliquez sur sauvegarder lorsque vous avez terminé."
+    "settingsDialogDescription": "Modifiez vos préférences ici. Cliquez sur sauvegarder lorsque vous avez terminé.",
+    "commandPalette": "Palette de Commandes"
   },
   "LandingHero": {
     "currentlyWorkingAt": "Actuellement chez",

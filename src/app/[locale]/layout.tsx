@@ -9,6 +9,7 @@ import Header from "@/components/layouts/header/header";
 import { getCurrentTheme } from "@/lib/current-theme";
 import { getCurrentFont } from "@/lib/current-font";
 import ThemeProvider from "@/components/providers/theme-provider";
+import { CommandPalette } from "@/components/command-palette/command-palette";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -38,6 +39,7 @@ export default async function RootLayout({
             <Header />
             {children}
             <Footer />
+            <CommandPalette />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
