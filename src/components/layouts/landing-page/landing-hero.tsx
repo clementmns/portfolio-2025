@@ -47,7 +47,7 @@ export default function LandingHero() {
         glow={true}
       />
 
-      <div className="relative z-10 py-0 sm:py-16 md:py-24 w-full">
+      <div className="relative z-10 py-0 sm:py-16 md:py-24 w-full mt-14 md:mt-0">
         <div className="flex flex-col items-center sm:items-start gap-2">
           <div className="inline-flex w-fit sm:w-auto items-center gap-2 rounded-full border px-3 py-1 text-xs text-muted-foreground bg-background">
             <span className="size-1.5 rounded-full bg-orange-500" />

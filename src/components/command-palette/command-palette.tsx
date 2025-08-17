@@ -4,6 +4,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
+import { CONTACT_EMAIL } from "@/lib/contact";
 
 interface Command {
   id: string;
@@ -17,11 +18,13 @@ export function CommandPalette() {
   const tHeader = useTranslations("Header");
   const tg = useTranslations("Generic");
   const { theme, setTheme } = useTheme();
-  const [open, setOpen] = React.useState(false); // logical open state
-  const [visible, setVisible] = React.useState(false); // controls mounting for exit animation
+  const [open, setOpen] = React.useState(false);
+  const [visible, setVisible] = React.useState(false);
   const [query, setQuery] = React.useState("");
   const [activeIndex, setActiveIndex] = React.useState(0);
   const inputRef = React.useRef<HTMLInputElement | null>(null);
+  const overlayRef = React.useRef<HTMLDivElement | null>(null);
+  const panelRef = React.useRef<HTMLDivElement | null>(null);
 
   // Toggle palette with ⌘K / Ctrl+K
   React.useEffect(() => {
@@ -51,13 +54,26 @@ export function CommandPalette() {
       const id = requestAnimationFrame(() => inputRef.current?.focus());
       return () => cancelAnimationFrame(id);
     } else {
-      // reset query & selection
       setQuery("");
       setActiveIndex(0);
-      // delay unmount for fade-out duration (match duration-200)
       const timeout = setTimeout(() => setVisible(false), 200);
       return () => clearTimeout(timeout);
     }
+  }, [open]);
+
+  // Close on any outside pointer down; let underlying button still receive event
+  React.useEffect(() => {
+    if (!open) return;
+    function handlePointerDown(e: PointerEvent) {
+      const panel = panelRef.current;
+      if (!panel) return;
+      if (!panel.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    window.addEventListener("pointerdown", handlePointerDown, true);
+    return () =>
+      window.removeEventListener("pointerdown", handlePointerDown, true);
   }, [open]);
 
   React.useEffect(() => {
@@ -80,8 +96,7 @@ export function CommandPalette() {
   }
 
   function copyEmail() {
-    const email = "contact@clementomnes.dev"; // TODO: centralize
-    navigator.clipboard.writeText(email).catch(() => {});
+    navigator.clipboard.writeText(CONTACT_EMAIL).catch(() => {});
   }
 
   function switchLocale(locale: string) {
@@ -172,22 +187,23 @@ export function CommandPalette() {
 
   return (
     <div
+      ref={overlayRef}
       role="dialog"
       aria-modal="true"
       aria-label="Command Palette"
       data-state={open ? "open" : "closed"}
+      data-command-palette-root
       className={cn(
-        "fixed inset-0 z-50 flex items-start justify-center p-4 pt-[15vh] backdrop-blur-sm bg-background/40",
+        "fixed inset-0 z-50 flex items-start justify-center p-4 pt-[15vh] backdrop-blur-sm bg-background/40 pointer-events-none",
         "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=open]:fade-in-0 data-[state=closed]:fade-out-0 duration-200"
       )}
-      onMouseDown={(e) => {
-        if (e.target === e.currentTarget) setOpen(false);
-      }}
+      // overlay no longer consumes clicks; pointerdown handled globally
     >
       <div
+        ref={panelRef}
         data-state={open ? "open" : "closed"}
         className={cn(
-          "bg-background border shadow-xs w-full max-w-xl overflow-hidden rounded-2xl grid",
+          "bg-background border shadow-xs w-full max-w-xl overflow-hidden rounded-2xl grid pointer-events-auto",
           "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=open]:fade-in-0 data-[state=closed]:fade-out-0 data-[state=open]:zoom-in-95 data-[state=closed]:zoom-out-95 duration-200"
         )}
       >

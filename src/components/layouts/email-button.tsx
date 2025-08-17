@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { CONTACT_EMAIL, CONTACT_MAILTO } from "@/lib/contact";
 import { Button } from "@/components/ui/button";
 import { CopyIcon, CheckIcon } from "lucide-react";
 
@@ -12,11 +13,11 @@ export function EmailButton({
 
   const handleEmailClick = useCallback(async () => {
     try {
-      await navigator.clipboard.writeText("contact@clementomnes.dev");
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
       setCopied(true);
       setTimeout(() => setCopied(false), 1000);
     } catch {
-      window.location.href = "mailto:contact@clementomnes.dev";
+      window.location.href = CONTACT_MAILTO;
     }
   }, []);
 
@@ -28,9 +29,9 @@ export function EmailButton({
         "group w-full sm:w-auto transition-transform duration-150",
         copied ? "scale-95" : "scale-100",
       ].join(" ")}
-      aria-label={text || "contact@clementomnes.dev"}
+      aria-label={text || CONTACT_EMAIL}
     >
-      {text || "contact@clementomnes.dev"}
+      {text || CONTACT_EMAIL}
       <span className="ml-2 relative size-4 inline-block align-middle">
         <CopyIcon
           className={[

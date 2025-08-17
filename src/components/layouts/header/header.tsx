@@ -18,7 +18,6 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Button
             variant="outline"
-            size="sm"
             onClick={openPalette}
             className="hidden sm:inline-flex items-center gap-2"
           >

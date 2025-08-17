@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { EmailButton } from "../email-button";
+import { CONTACT_EMAIL } from "@/lib/contact";
 import { FooterSocials } from "./footer-socials";
 import { FooterCopyright } from "./footer-copyright";
 
@@ -13,7 +14,7 @@ export default function Footer() {
           {t("title")}
         </h3>
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <EmailButton text={"contact@clementomnes.dev"} />
+          <EmailButton text={CONTACT_EMAIL} />
           <FooterSocials />
         </div>
         <FooterCopyright />
