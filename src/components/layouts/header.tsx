@@ -1,5 +1,3 @@
-"use client";
-
 import { SettingsDialog } from "@/components/settings/settings-dialog";
 
 export default function Header() {
