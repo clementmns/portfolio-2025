@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import GMT from "../header/header-gmt";
+import GMT from "../layouts/header/header-gmt";
 import { Button } from "@/components/ui/button";
 import { DotPattern } from "@/components/ui/dot-pattern";
-import { EmailButton } from "../email-button";
+import { EmailButton } from "../layouts/email-button";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Rocket, Layers, Sparkles, ExternalLinkIcon } from "lucide-react";
@@ -16,7 +16,7 @@ type HighlightKey =
   | "highlightProblemSolving"
   | "highlightArchitecture";
 
-export default function LandingHero() {
+export default function HeroSection() {
   const t = useTranslations("LandingHero");
 
   const name = t("heroName");
@@ -151,13 +151,7 @@ export default function LandingHero() {
           {t("heroDescription")}
         </p>
 
-        <div className="mt-5 flex flex-wrap items-center gap-2 justify-center sm:justify-start text-xs text-muted-foreground">
-          <span className="inline-flex items-center text-center rounded-full border px-2.5 py-1 bg-background">
-            {t("heroStack")}
-          </span>
-        </div>
-
-        <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 justify-center sm:justify-start">
+        <div className="mt-4 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 justify-center sm:justify-start">
           <Button asChild size="lg" className="w-full sm:w-auto">
             <Link href="#projects" aria-label={t("viewProjects")}>
               {t("viewProjects")}
@@ -166,7 +160,7 @@ export default function LandingHero() {
           <EmailButton text={t("copyEmail")} variant="outline" size="lg" />{" "}
         </div>
 
-        <ul className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-3 max-w-5xl mx-auto sm:mx-0">
+        <ul className="mt-20 grid grid-cols-1 gap-3 sm:grid-cols-3 max-w-5xl mx-auto sm:mx-0">
           {[
             { key: "highlightJavaReact", Icon: Sparkles },
             { key: "highlightProblemSolving", Icon: Rocket },
