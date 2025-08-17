@@ -1,14 +1,9 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
-  },
   "Generic": {
     "buttonSave": "Save changes",
     "buttonCancel": "Cancel",
     "settings": "Settings",
     "appearance": "Appearance",
-    "navigation": "Navigation",
     "contact": "Contact",
     "language": "Language",
     "actionLightMode": "Switch to Light Mode",
@@ -17,7 +12,6 @@
     "noResults": "No results",
     "hintNavigate": "↑↓ to navigate • Enter to run",
     "hintClose": "Esc to close",
-    "gotoProjects": "Go to Projects",
     "copyEmail": "Copy Email"
   },
   "Header": {
@@ -41,21 +35,25 @@
     "buttonLabel": "Let's Work Together",
     "commandPalette": "Command Palette"
   },
-  "LandingHero": {
-    "currentlyWorkingAt": "Currently working at",
+  "Hero": {
     "heroTitle": "Hi 👋, I'm Clément",
-    "heroName": "Clément",
-    "yrs": "yrs",
-    "heroDescription": "Full-stack developer and Software Engineering student. Passionate about building elegant applications, streamlining workflows, and solving complex problems with clean, efficient code. Always eager to learn new technologies and tackle exciting challenges.",
-    "heroStack": "TypeScript · React/Next.js · Node.js/Nest.js · SQL/NOSQL · Java/Spring",
-    "viewProjects": "View projects",
-    "copyEmail": "Copy email",
-    "highlightJavaReact": "I specialize in Java and React development.",
-    "highlightProblemSolving": "I excel at solving complex problems.",
-    "highlightArchitecture": "I design maintainable architectures."
+    "location": "Based in",
+    "city": "Rouen",
+    "language": "Languages",
+    "languagesList": "EN / FR",
+    "languagesListFull": "English, French",
+    "getInTouch": "Get in touch"
+  },
+  "Current": {
+    "title": "Currently",
+    "description": "Working on the marketing survey application at R3mScore.",
+    "role": "FullStack Developer"
+  },
+  "Past": {
+    "title": "Experiences",
+    "role": "FullStack Developer (InternShip)"
   },
   "Footer": {
-    "title": "Don't hesitate to drop me an email or connect with me on LinkedIn 🤟",
     "message": "Made with passion, and a lot of coffee ...",
     "copyright": "Clément OMNÈS"
   }

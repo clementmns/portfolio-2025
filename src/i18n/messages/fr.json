@@ -1,14 +1,9 @@
 {
-  "HomePage": {
-    "title": "Bonjour le monde !",
-    "about": "Aller à la page à propos"
-  },
   "Generic": {
     "buttonSave": "Sauvegarder les changements",
     "buttonCancel": "Annuler",
     "settings": "Paramètres",
     "appearance": "Apparence",
-    "navigation": "Navigation",
     "contact": "Contact",
     "language": "Langue",
     "actionLightMode": "Passer en mode clair",
@@ -17,7 +12,6 @@
     "noResults": "Aucun résultat",
     "hintNavigate": "↑↓ naviguer • Entrée exécuter",
     "hintClose": "Échap fermer",
-    "gotoProjects": "Aller aux Projets",
     "copyEmail": "Copier l'email"
   },
   "Header": {
@@ -40,21 +34,21 @@
     "settingsDialogDescription": "Modifiez vos préférences ici. Cliquez sur sauvegarder lorsque vous avez terminé.",
     "commandPalette": "Palette de Commandes"
   },
-  "LandingHero": {
-    "currentlyWorkingAt": "Actuellement chez",
+  "Hero": {
     "heroTitle": "Salut 👋, je suis Clément",
-    "heroName": "Clément",
-    "yrs": "ans",
-    "heroDescription": "Développeur full‑stack et étudiant en ingénierie logicielle. Passionné par la création d'applications élégantes, l'optimisation des flux de travail et la résolution de problèmes complexes avec un code propre et efficace. Toujours désireux d'apprendre de nouvelles technologies et de relever des défis passionnants.",
-    "heroStack": "TypeScript · React/Next.js · Node.js/Nest.js · SQL/NOSQL · Java/Spring",
-    "viewProjects": "Voir les projets",
-    "copyEmail": "Copier l'email",
-    "highlightJavaReact": "Je me spécialise dans le développement Java et React.",
-    "highlightProblemSolving": "J'excelle dans la résolution de problèmes complexes.",
-    "highlightArchitecture": "Je conçois des architectures maintenables."
+    "location": "Basé à",
+    "city": "Rouen",
+    "language": "Langues",
+    "languagesList": "EN / FR",
+    "languagesListFull": "Anglais, Français",
+    "getInTouch": "Me contacter"
+  },
+  "Current": {
+    "title": "Actuellement",
+    "description": "Travaille sur l'application d'enquête marketing chez R3mScore.",
+    "role": "Développeur FullStack"
   },
   "Footer": {
-    "title": "N'hésitez pas à m'envoyer un e-mail ou à vous connecter avec moi sur LinkedIn 🤟",
     "message": "Fait avec passion, et beaucoup de café ...",
     "copyright": "Clément OMNÈS"
   }

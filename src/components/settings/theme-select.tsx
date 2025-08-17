@@ -7,7 +7,7 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { useTranslations } from "next-intl";
-import { BoltIcon, MoonIcon, SunIcon } from "lucide-react";
+import { HiSun, HiMoon, HiLightningBolt } from "react-icons/hi";
 import { Theme } from "@/types/themes";
 
 export function ThemeSelect() {
@@ -32,15 +32,15 @@ export function ThemeSelect() {
       </SelectTrigger>
       <SelectContent>
         <SelectItem value="light">
-          <SunIcon />
+          <HiSun />
           {t("formThemeOptionLight")}
         </SelectItem>
         <SelectItem value="dark">
-          <MoonIcon />
+          <HiMoon />
           {t("formThemeOptionDark")}
         </SelectItem>
         <SelectItem value="system">
-          <BoltIcon />
+          <HiLightningBolt />
           {t("formThemeOptionSystem")}
         </SelectItem>
       </SelectContent>

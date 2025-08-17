@@ -1,189 +1,164 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
+import { Button } from "../ui/button";
+import { Badge } from "../ui/badge";
+import { Tooltip, TooltipTrigger, TooltipContent } from "../ui/tooltip";
+import { HiExternalLink } from "react-icons/hi";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { HiMapPin } from "react-icons/hi2";
+import { HiLanguage } from "react-icons/hi2";
+import { HiIdentification } from "react-icons/hi2";
 import Link from "next/link";
-import GMT from "../layouts/header/header-gmt";
-import { Button } from "@/components/ui/button";
-import { DotPattern } from "@/components/ui/dot-pattern";
-import { EmailButton } from "../layouts/email-button";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import { Rocket, Layers, Sparkles, ExternalLinkIcon } from "lucide-react";
-import { Card } from "@/components/ui/card";
-import { DynamicAge } from "@/components/hooks/use-age";
-
-type HighlightKey =
-  | "highlightJavaReact"
-  | "highlightProblemSolving"
-  | "highlightArchitecture";
+import GMT from "../gmt";
 
 export default function HeroSection() {
-  const t = useTranslations("LandingHero");
-
-  const name = t("heroName");
-  const title = t("heroTitle");
-  const nameIndex = title.indexOf(name);
-  const before = nameIndex >= 0 ? title.slice(0, nameIndex) : title;
-  const after = nameIndex >= 0 ? title.slice(nameIndex + name.length) : "";
-
-  const birthDate = new Date(2005, 1, 23, 14); // 23 Feb 2005 14:00 local time
+  const t = useTranslations("Hero");
+  const locale = useLocale();
 
   return (
-    <section
-      className="relative w-full min-h-[100svh] flex items-center"
-      aria-labelledby="hero-title"
-    >
-      <div
-        aria-hidden
-        className="pointer-events-none -top-60 absolute inset-0 h-[80%] w-full rounded-full bg-primary/20 blur-3xl opacity-30 -z-1000"
-      />
-      <DotPattern
-        aria-hidden
-        className=" [mask-image:radial-gradient(60%_60%_at_50%_40%,black,transparent)]"
-        width={24}
-        height={24}
-        cx={1}
-        cy={1}
-        cr={1}
-        glow={true}
-      />
-
-      <div className="relative z-10 py-0 sm:py-16 md:py-24 w-full mt-14 md:mt-0">
-        <div className="flex flex-col items-center sm:items-start gap-2">
-          <div className="inline-flex w-fit sm:w-auto items-center gap-2 rounded-full border px-3 py-1 text-xs text-muted-foreground bg-background">
-            <span className="size-1.5 rounded-full bg-orange-500" />
-            <span>
-              {t("currentlyWorkingAt")}{" "}
-              <Link
-                href="https://r3mscore.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="R3mScore"
-                className="font-semibold underline hover:text-primary inline-flex items-center gap-1"
-              >
-                R3mScore
-                <ExternalLinkIcon strokeWidth={2.5} className="size-3" />
-              </Link>
+    <section className="relative w-full" aria-labelledby="hero-title">
+      <div className="flex flex-col gap-6 w-full sm:flex-row sm:items-start sm:justify-between">
+        <div className="flex flex-col max-w-none sm:max-w-xl lg:max-w-2xl order-1 items-center sm:items-start">
+          <Avatar className="size-42 sm:size-24 md:size-32 mb-3 sm:mb-4 rounded-xl">
+            <AvatarImage
+              src="/me.webp"
+              className="object-cover"
+              alt="Profile picture of @clementmns"
+            />
+            <AvatarFallback>CO</AvatarFallback>
+          </Avatar>
+          <h1
+            id="hero-title"
+            className="font-bold text-4xl leading-tight tracking-tight sm:text-4xl md:text-5xl"
+          >
+            {t("heroTitle")}
+          </h1>
+          <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-prose">
+            I&apos;m a {t("location")}{" "}
+            <span className="font-medium text-foreground">
+              Full-stack developer and Software Engineering student{" "}
             </span>
-          </div>
-        </div>
-
-        <h1
-          id="hero-title"
-          className="mt-6 text-balance text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-center sm:text-left"
-        >
-          <span>{before}</span>
-          {nameIndex >= 0 ? (
-            <span className="relative inline-flex items-center group">
-              <span
-                aria-hidden
-                className="pointer-events-none absolute left-1/2 bottom-full z-20 mb-3 -translate-x-1/2 opacity-0 scale-95 transition-all duration-200 ease-out group-hover:opacity-100 group-hover:scale-100 hidden md:block"
-              >
-                <span className="block rounded-xl border border-foreground/10 bg-background/90 p-2 backdrop-blur shadow-2xl ring-1 ring-foreground/10">
-                  <span className="relative block size-40 overflow-hidden rounded-lg">
-                    <Image
-                      src="/me.webp"
-                      alt=""
-                      fill
-                      sizes="160px"
-                      priority
-                      className="object-cover object-[center_25%] md:object-center"
-                    />
-                  </span>
-                  <span className="mt-2 w-full flex justify-center">
-                    <span
-                      className="inline-flex items-center gap-1 rounded-full border px-2.5 py-1 bg-background/70 font-mono text-xs"
-                      title="Live updating age"
-                    >
-                      <DynamicAge
-                        birthDate={birthDate}
-                        decimals={10}
-                        className="font-mono text-primary/90"
-                      />
-                      <span className="text-muted-foreground/70 uppercase tracking-wide">
-                        {t("yrs")}
-                      </span>
-                    </span>
-                  </span>
-                </span>
-              </span>
-              <span className="underline underline-offset-4 cursor-pointer">
-                {name}
-              </span>
-            </span>
-          ) : null}
-          <span>{after}</span>
-        </h1>
-        <div className="mt-3 flex flex-wrap items-center gap-4 text-sm text-muted-foreground justify-center sm:justify-start">
-          <GMT />
-        </div>
-
-        <div className="mt-6 md:hidden flex flex-col items-center gap-2">
-          <div className="relative w-full">
-            <div className="relative rounded-full p-[3px]">
-              <div className="relative w-full overflow-hidden rounded-lg h-[25vh]">
-                <Image
-                  src="/me.webp"
-                  alt={`${name} portrait`}
-                  fill
-                  priority
-                  className="object-cover object-[center_30%] md:object-center"
-                />
+            with experience working with various technologies. Been building
+            software for over 3 years, and I currently work at{" "}
+            <a
+              href="https://r3mscore.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-foreground underline inline-flex items-center hover:text-primary transition-colors"
+            >
+              R3mScore
+              <HiExternalLink className="size-3 ml-1" />
+            </a>
+          </p>
+          <div className="mt-6">
+            <dl className="flex flex-wrap gap-6 justify-center sm:justify-start">
+              <div className="flex flex-col items-center sm:items-start gap-1 min-w-20">
+                <dt className="text-[10px] tracking-wide font-medium text-muted-foreground uppercase">
+                  {t("location")}
+                </dt>
+                <dd>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Badge
+                        variant="outline"
+                        className="px-2 py-1 text-xs font-medium cursor-help group"
+                        aria-label="Open map with location of Rouen"
+                      >
+                        <HiMapPin className="text-primary group-hover:rotate-12 transition-transform" />{" "}
+                        {t("city")}
+                      </Badge>
+                    </TooltipTrigger>
+                    <TooltipContent side="top" className="text-[11px]">
+                      <GMT />
+                    </TooltipContent>
+                  </Tooltip>
+                </dd>
               </div>
+              <div className="flex flex-col items-center sm:items-start gap-1 min-w-20">
+                <dt className="text-[10px] tracking-wide font-medium text-muted-foreground uppercase">
+                  {t("language")}
+                </dt>
+                <dd>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Badge
+                        variant="outline"
+                        className="px-2 py-1 text-xs font-medium cursor-help group"
+                        aria-label={
+                          t("languagesListFull") || t("languagesList")
+                        }
+                      >
+                        <HiLanguage className="group-hover:rotate-12 transition-transform" />{" "}
+                        {t("languagesList")}
+                      </Badge>
+                    </TooltipTrigger>
+                    <TooltipContent
+                      side="top"
+                      className="text-sm font-medium whitespace-nowrap font-mono"
+                    >
+                      {t("languagesListFull") || t("languagesList")}
+                    </TooltipContent>
+                  </Tooltip>
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div className="mt-6 flex sm:justify-start justify-center gap-3">
+            <div className="flex flex-wrap gap-2">
+              <Button
+                className="group"
+                variant="default"
+                size="default"
+                asChild
+                aria-label="Download vCard"
+              >
+                <Link href={`/vcard/${locale}-vcard.vcf`} download>
+                  <HiIdentification className="mr-1.5 group-hover:rotate-12 transition-transform" />{" "}
+                  {t("getInTouch")}
+                </Link>
+              </Button>
+              <Button
+                className="group"
+                variant="outline"
+                size="icon"
+                asChild
+                aria-label="GitHub profile"
+              >
+                <Link
+                  href="https://github.com/clementmns"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub
+                    strokeWidth={2.5}
+                    className="group-hover:rotate-12 transition-transform"
+                  />
+                </Link>
+              </Button>
+              <Button
+                className="group"
+                variant="outline"
+                size="icon"
+                asChild
+                aria-label="LinkedIn profile"
+              >
+                <Link
+                  href="https://www.linkedin.com/in/clement-omnes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin
+                    strokeWidth={2.5}
+                    className="group-hover:rotate-12 transition-transform"
+                  />
+                </Link>
+              </Button>
             </div>
           </div>
-          <span
-            className="inline-flex items-center gap-1 rounded-full border px-3 py-1 bg-background/70 backdrop-blur font-mono text-xs"
-            aria-label="Live age in years"
-            title="Live updating age"
-          >
-            <DynamicAge
-              birthDate={birthDate}
-              decimals={10}
-              className="font-mono text-primary/90"
-            />
-            <span className="text-muted-foreground/70 uppercase tracking-wide">
-              {t("yrs")}
-            </span>
-          </span>
         </div>
-
-        <p className="mt-6 text-pretty text-lg leading-7 text-muted-foreground max-w-[70ch] mx-auto sm:mx-0 text-justify sm:text-left">
-          {t("heroDescription")}
-        </p>
-
-        <div className="mt-4 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 justify-center sm:justify-start">
-          <Button asChild size="lg" className="w-full sm:w-auto">
-            <Link href="#projects" aria-label={t("viewProjects")}>
-              {t("viewProjects")}
-            </Link>
-          </Button>
-          <EmailButton text={t("copyEmail")} variant="outline" size="lg" />{" "}
-        </div>
-
-        <ul className="mt-20 grid grid-cols-1 gap-3 sm:grid-cols-3 max-w-5xl mx-auto sm:mx-0">
-          {[
-            { key: "highlightJavaReact", Icon: Sparkles },
-            { key: "highlightProblemSolving", Icon: Rocket },
-            { key: "highlightArchitecture", Icon: Layers },
-          ].map(({ key, Icon }) => (
-            <li key={key} className="h-full">
-              <Card
-                className="group justify-center h-full p-4 rounded-2xl bg-background/60 text-sm transition-colors hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
-                tabIndex={0}
-                aria-label={t(key as HighlightKey)}
-              >
-                <div className="flex items-center gap-3 justify-center">
-                  <div className="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 text-primary shrink-0 group-hover:bg-primary/15 group-focus-visible:bg-primary/15 transition-colors">
-                    <Icon className="size-4" />
-                  </div>
-                  <p className="leading-snug text-muted-foreground/90 flex-1">
-                    {t(key as HighlightKey)}
-                  </p>
-                </div>
-              </Card>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );

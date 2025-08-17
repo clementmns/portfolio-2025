@@ -22,9 +22,9 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { SettingsIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { SettingsForm } from "./settings-form";
+import { HiCog6Tooth } from "react-icons/hi2";
 
 export function SettingsDialog() {
   const [open, setOpen] = React.useState(false);
@@ -45,7 +45,7 @@ export function SettingsDialog() {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
           <Button variant="outline" size="icon" className="group">
-            <SettingsIcon
+            <HiCog6Tooth
               className="size-4 transition-transform duration-200 group-hover:rotate-90"
               aria-label="Settings"
             />
@@ -68,7 +68,7 @@ export function SettingsDialog() {
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
         <Button variant="outline" size="icon" className="group">
-          <SettingsIcon
+          <HiCog6Tooth
             className="size-4 transition-transform duration-200 group-hover:rotate-90"
             aria-label="Settings"
           />

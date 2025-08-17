@@ -4,12 +4,11 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { fontClassMap } from "@/lib/fonts";
-import Footer from "@/components/layouts/footer/footer";
-import Header from "@/components/layouts/header/header";
+import Header from "@/components/layouts/header";
 import { getCurrentTheme } from "@/lib/current-theme";
 import { getCurrentFont } from "@/lib/current-font";
 import ThemeProvider from "@/components/providers/theme-provider";
-import { CommandPalette } from "@/components/command-palette/command-palette";
+import Background from "../../components/layouts/background";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -36,10 +35,9 @@ export default async function RootLayout({
       <body className={`${fontClassMap[font]} antialiased`}>
         <NextIntlClientProvider>
           <ThemeProvider initialTheme={theme}>
+            <Background />
             <Header />
             {children}
-            <Footer />
-            <CommandPalette />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
