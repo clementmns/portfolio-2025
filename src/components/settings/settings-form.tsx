@@ -6,6 +6,7 @@ import { LangSelect } from "./lang-select";
 import { ThemeSelect } from "./theme-select";
 import { FontSelect } from "./font-select";
 import { settingsFormAction } from "@/actions/settings-form-action";
+import { SeasonSelect } from "./season-select";
 
 export function SettingsForm({ className }: React.ComponentProps<"form">) {
   const t = useTranslations("Header");
@@ -23,6 +24,10 @@ export function SettingsForm({ className }: React.ComponentProps<"form">) {
       <div className="grid gap-3">
         <Label htmlFor="theme">{t("formThemeLabel")}</Label>
         <ThemeSelect />
+      </div>
+      <div className="grid gap-3">
+        <Label htmlFor="season">{t("formSeasonLabel")}</Label>
+        <SeasonSelect />
       </div>
       <div className="grid gap-3">
         <Label htmlFor="font">{t("formFontLabel")}</Label>

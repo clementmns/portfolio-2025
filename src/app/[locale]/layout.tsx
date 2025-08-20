@@ -7,8 +7,9 @@ import { fontClassMap } from "@/lib/fonts";
 import Header from "@/components/layouts/header";
 import { getCurrentTheme } from "@/lib/current-theme";
 import { getCurrentFont } from "@/lib/current-font";
+import { getCurrentSeason } from "@/lib/current-season";
 import ThemeProvider from "@/components/providers/theme-provider";
-import Background from "../../components/layouts/background";
+import Background from "@/components/layouts/background";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,6 +25,7 @@ export default async function RootLayout({
 }>) {
   const theme = await getCurrentTheme();
   const font = await getCurrentFont();
+  const season = await getCurrentSeason();
 
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
@@ -32,7 +34,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${fontClassMap[font]} antialiased`}>
+      <body className={`${fontClassMap[font]} antialiased ${season}`}>
         <NextIntlClientProvider>
           <ThemeProvider initialTheme={theme}>
             <Background />

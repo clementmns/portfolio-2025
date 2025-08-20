@@ -49,11 +49,8 @@ export default function PastCard() {
   return (
     <Card>
       <CardHeader>
-        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-violet-50 dark:bg-violet-900">
-          <HiBriefcase
-            size={16}
-            className="text-violet-500 dark:text-violet-400"
-          />
+        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/30 dark:bg-primary/20">
+          <HiBriefcase size={16} className="text-primary" />
         </div>
         <CardTitle>Past</CardTitle>
         <CardContent className="gap-5 flex flex-col relative pt-2">

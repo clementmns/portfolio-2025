@@ -8,11 +8,8 @@ export default function CurrentCard() {
   return (
     <Card>
       <CardHeader>
-        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-50 dark:bg-orange-900">
-          <HiUserGroup
-            size={16}
-            className="text-orange-500 dark:text-orange-400"
-          />
+        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/30 dark:bg-primary/20">
+          <HiUserGroup size={16} className="text-primary" />
         </div>
         <CardTitle>{t("title")}</CardTitle>
         <CardDescription>
