@@ -26,7 +26,7 @@ export function ThemeSelect() {
   }
 
   return (
-    <Select defaultValue={theme} name="theme">
+    <Select defaultValue={theme} name="theme" aria-label={t("formThemeLabel")}>
       <SelectTrigger className="w-full">
         <SelectValue placeholder={t("formThemePlaceholder")} />
       </SelectTrigger>

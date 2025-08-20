@@ -74,7 +74,7 @@ export default function PastCard() {
               <div className="flex flex-col flex-1 min-w-0">
                 <div className="flex flex-col gap-0.5">
                   <div className="flex items-baseline justify-between">
-                    <h4 className="font-semibold">{exp.company}</h4>
+                    <p className="font-semibold">{exp.company}</p>
                     <p className="text-xs text-muted-foreground">
                       <time dateTime={exp.start}>
                         {formatRange(exp.start, exp.end)}

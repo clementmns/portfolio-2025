@@ -27,7 +27,7 @@ export function FontSelect() {
   }
 
   return (
-    <Select defaultValue={font} name="font">
+    <Select defaultValue={font} name="font" aria-label={t("formFontLabel")}>
       <SelectTrigger className="w-full">
         <SelectValue placeholder={t("formFontPlaceholder")} />
       </SelectTrigger>

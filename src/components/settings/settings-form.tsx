@@ -28,7 +28,9 @@ export function SettingsForm({ className }: React.ComponentProps<"form">) {
         <Label htmlFor="font">{t("formFontLabel")}</Label>
         <FontSelect />
       </div>
-      <Button type="submit">{tg("buttonSave")}</Button>
+      <Button type="submit" aria-label={tg("buttonSave")}>
+        {tg("buttonSave")}
+      </Button>
     </form>
   );
 }

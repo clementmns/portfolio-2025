@@ -44,7 +44,12 @@ export function SettingsDialog() {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button variant="outline" size="icon" className="group">
+          <Button
+            variant="outline"
+            size="icon"
+            className="group"
+            aria-label="Settings"
+          >
             <HiCog6Tooth
               className="size-4 transition-transform duration-200 group-hover:rotate-90"
               aria-label="Settings"

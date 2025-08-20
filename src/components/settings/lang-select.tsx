@@ -15,7 +15,7 @@ export function LangSelect() {
   const lang: Locale = (useLocale() as Locale) || fallbackLocale;
 
   return (
-    <Select defaultValue={lang} name="lang">
+    <Select defaultValue={lang} name="lang" aria-label={t("formLangLabel")}>
       <SelectTrigger className="w-full">
         <SelectValue placeholder={t("formLangPlaceholder")} />
       </SelectTrigger>
