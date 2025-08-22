@@ -1,13 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { HiTrophy } from "react-icons/hi2";
-import Image from "next/image";
 import { formatRange } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import { LogoLink } from "../ui/logo-link";
 
 type Certification = {
   title: string;
   desc: string;
   logo: string;
+  link: string;
   start: string;
   end?: string | null;
 };
@@ -20,7 +21,9 @@ export default function Certifications() {
       title: "OpQuast",
       desc: t("opquast"),
       logo: "/certifications/opquast.png",
-      start: "2024-09-01",
+      link: "https://www.opquast.com/",
+      start: "2025-03-04",
+      end: "2028-03-04",
     },
   ];
 
@@ -37,15 +40,12 @@ export default function Certifications() {
               key={cert.title + cert.desc + idx}
               className="flex items-start gap-3 w-full relative"
             >
-              <div className="relative z-10 flex-shrink-0 bg-white border w-fit p-2 rounded-sm shadow-xs">
-                <Image
-                  src={cert.logo}
-                  alt={cert.title}
-                  width={30}
-                  height={30}
-                  className="rounded-[2px]"
-                />
-              </div>
+              <LogoLink
+                href={cert.link}
+                logoSrc={cert.logo}
+                logoAlt={cert.title}
+                title={`View ${cert.title} certification`}
+              />
               <div className="flex flex-col flex-1 min-w-0">
                 <div className="flex flex-col gap-0.5">
                   <div className="flex items-baseline justify-between">

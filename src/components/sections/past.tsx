@@ -1,13 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { HiBriefcase } from "react-icons/hi2";
-import Image from "next/image";
 import { formatRange } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import { LogoLink } from "../ui/logo-link";
 
 type Experience = {
   company: string;
   role: string;
   logo: string;
+  link: string;
   start: string;
   end?: string | null;
 };
@@ -19,12 +20,14 @@ export default function PastCard() {
     {
       company: "R3mScore",
       role: t("1.role"),
+      link: "https://www.r3mscore.com/",
       logo: "/companies/r3mscore.jpg",
       start: "2024-09-01",
     },
     {
       company: "R3mScore",
       role: t("2.role"),
+      link: "https://www.r3mscore.com/",
       logo: "/companies/r3mscore.jpg",
       start: "2024-03-01",
       end: "2024-06-01",
@@ -44,15 +47,12 @@ export default function PastCard() {
               key={exp.company + exp.role + idx}
               className="flex items-start gap-3 w-full relative"
             >
-              <div className="relative z-10 flex-shrink-0 bg-white border w-fit p-2 rounded-sm shadow-xs">
-                <Image
-                  src={exp.logo}
-                  alt={exp.company}
-                  width={30}
-                  height={30}
-                  className="rounded-[2px]"
-                />
-              </div>
+              <LogoLink
+                href={exp.link}
+                logoSrc={exp.logo}
+                logoAlt={exp.company}
+                title={`View ${exp.company} logo`}
+              />
               <div className="flex flex-col flex-1 min-w-0">
                 <div className="flex flex-col gap-0.5">
                   <div className="flex items-baseline justify-between">
