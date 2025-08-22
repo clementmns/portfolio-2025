@@ -63,7 +63,7 @@ export function SettingsDialog() {
               {t("settingsDialogDescription")}
             </DialogDescription>
           </DialogHeader>
-          <SettingsForm />
+          <SettingsForm onSuccess={() => setOpen(false)} />
         </DialogContent>
       </Dialog>
     );
@@ -86,7 +86,7 @@ export function SettingsDialog() {
             {t("settingsDialogDescription")}
           </DrawerDescription>
         </DrawerHeader>
-        <SettingsForm className="px-4" />
+        <SettingsForm className="px-4" onSuccess={() => setOpen(false)} />
         <DrawerFooter className="pt-2">
           <DrawerClose asChild>
             <Button variant="outline">{tg("buttonCancel")}</Button>

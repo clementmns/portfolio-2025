@@ -7,22 +7,19 @@ import { fallbackLocale } from "@/types/locales";
 import { fallbackTheme } from "@/types/themes";
 import { fallbackSeason } from "@/types/seasons";
 import { fallbackFont } from "@/types/fonts";
-import { cookies, headers } from "next/headers";
-import { redirect } from "@/i18n/navigation";
+import { cookies } from "next/headers";
 
-export async function settingsFormAction(formData: FormData) {
+/**
+ * Server action to update user settings cookies without redirect
+ * This is optimized for better performance - no page reload/white flash
+ */
+export async function updateSettingsAction(formData: FormData) {
   const cookieStore = await cookies();
 
   const locale: Locale = (formData.get("lang") as Locale) || fallbackLocale;
   const theme: Theme = (formData.get("theme") as Theme) || fallbackTheme;
   const season: Season = (formData.get("season") as Season) || fallbackSeason;
   const font = (formData.get("font") as string) || fallbackFont;
-
-  const nextHeaders = await headers();
-  const pathname = nextHeaders.get("x-pathname");
-  const pathWithoutLocale = pathname
-    ? pathname.replace(/^\/[a-zA-Z-]+(\/|$)/, "/")
-    : "/";
 
   if (theme) {
     cookieStore.set("user-theme", theme);
@@ -33,6 +30,9 @@ export async function settingsFormAction(formData: FormData) {
   if (font) {
     cookieStore.set("user-font", font);
   }
+  if (locale) {
+    cookieStore.set("user-locale", locale);
+  }
 
-  redirect({ href: pathWithoutLocale, locale });
+  return { success: true };
 }
