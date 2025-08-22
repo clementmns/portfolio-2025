@@ -1,17 +1,21 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
-import { Tooltip, TooltipTrigger, TooltipContent } from "../ui/tooltip";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "@/components/ui/tooltip";
 import { HiExternalLink } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { HiMapPin } from "react-icons/hi2";
 import { IoLanguage } from "react-icons/io5";
 import { HiIdentification } from "react-icons/hi2";
 import Link from "next/link";
-import GMT from "../gmt";
+import GMT from "@/components/gmt";
 
 export default function HeroSection() {
   const t = useTranslations("Hero");

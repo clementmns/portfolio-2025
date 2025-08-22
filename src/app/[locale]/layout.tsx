@@ -10,7 +10,7 @@ import { getCurrentFont } from "@/lib/current-font";
 import { getCurrentSeason } from "@/lib/current-season";
 import ThemeProvider from "@/components/providers/theme-provider";
 import Background from "@/components/layouts/background";
-import Footer from "../../components/layouts/footer";
+import Footer from "@/components/layouts/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",

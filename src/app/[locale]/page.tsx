@@ -1,8 +1,9 @@
-import AboutCard from "../../components/sections/about";
-import Certifications from "../../components/sections/certifications";
-import CurrentCard from "../../components/sections/current";
-import HeroSection from "../../components/sections/hero";
-import PastCard from "../../components/sections/past";
+import AboutCard from "@/components/sections/about";
+import Certifications from "@/components/sections/certifications";
+import CurrentCard from "@/components/sections/current";
+import HeroSection from "@/components/sections/hero";
+import ExperiencesCard from "@/components/sections/experiences";
+import TrainingsCard from "../../components/sections/trainings";
 
 export default function HomePage() {
   return (
@@ -11,10 +12,12 @@ export default function HomePage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
         <div className="flex flex-col gap-4">
           <CurrentCard />
-          <PastCard />
+          <ExperiencesCard />
           <Certifications />
         </div>
-        <div className="flex flex-col gap-4"></div>
+        <div className="flex flex-col gap-4">
+          <TrainingsCard />
+        </div>
         <div className="flex flex-col gap-4">
           <AboutCard />
         </div>

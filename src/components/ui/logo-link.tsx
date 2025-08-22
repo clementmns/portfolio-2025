@@ -21,7 +21,7 @@ export function LogoLink({
   logoAlt,
   title,
   className,
-  logoSize = 30,
+  logoSize = 44,
   iconSize = 20,
   external = true,
 }: LogoLinkProps) {

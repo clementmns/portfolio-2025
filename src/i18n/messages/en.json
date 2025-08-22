@@ -46,13 +46,24 @@
     "description": "Working on the marketing survey application at R3mScore.",
     "role": "FullStack Developer"
   },
-  "Past": {
+  "Experiences": {
     "title": "Experiences",
     "1": {
       "role": "FullStack Developer (Apprenticeship)"
     },
     "2": {
       "role": "FullStack Developer (InternShip)"
+    }
+  },
+  "Trainings": {
+    "title": "Trainings",
+    "1": {
+      "school": "CESI",
+      "program": "Master's degree in Computer Science (in apprenticeship)"
+    },
+    "2": {
+      "school": "University of Rouen",
+      "program": "BUT in Multimedia and Internet Professions"
     }
   },
   "About": {

@@ -6,11 +6,15 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export async function formatRange(start: string, end?: string | null) {
+export async function formatRange(
+  start: string,
+  end?: string | null,
+  unit: "year" | "month" = "month"
+) {
   try {
     const locale = await getLocale();
     const fmt = new Intl.DateTimeFormat(locale, {
-      month: "short",
+      month: unit === "month" ? "short" : undefined,
       year: "numeric",
     });
     const startDate = new Date(start);

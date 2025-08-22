@@ -1,8 +1,8 @@
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { HiTrophy } from "react-icons/hi2";
 import { formatRange } from "@/lib/utils";
 import { useTranslations } from "next-intl";
-import { LogoLink } from "../ui/logo-link";
+import { LogoLink } from "@/components/ui/logo-link";
 
 type Certification = {
   title: string;

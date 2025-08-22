@@ -1,8 +1,8 @@
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { HiBriefcase } from "react-icons/hi2";
 import { formatRange } from "@/lib/utils";
 import { useTranslations } from "next-intl";
-import { LogoLink } from "../ui/logo-link";
+import { LogoLink } from "@/components/ui/logo-link";
 
 type Experience = {
   company: string;
@@ -13,8 +13,8 @@ type Experience = {
   end?: string | null;
 };
 
-export default function PastCard() {
-  const t = useTranslations("Past");
+export default function ExperiencesCard() {
+  const t = useTranslations("Experiences");
 
   const experiences: Experience[] = [
     {

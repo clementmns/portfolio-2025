@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { HiUser } from "react-icons/hi2";
 
 export default function AboutCard() {
