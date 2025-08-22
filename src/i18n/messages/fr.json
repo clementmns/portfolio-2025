@@ -1,18 +1,7 @@
 {
   "Generic": {
     "buttonSave": "Sauvegarder les changements",
-    "buttonCancel": "Annuler",
-    "settings": "Paramètres",
-    "appearance": "Apparence",
-    "contact": "Contact",
-    "language": "Langue",
-    "actionLightMode": "Passer en mode clair",
-    "actionDarkMode": "Passer en mode sombre",
-    "commandPlaceholder": "Tapez une commande ou recherchez...",
-    "noResults": "Aucun résultat",
-    "hintNavigate": "↑↓ naviguer • Entrée exécuter",
-    "hintClose": "Échap fermer",
-    "copyEmail": "Copier l'email"
+    "buttonCancel": "Annuler"
   },
   "Header": {
     "formLangLabel": "Langue",
@@ -38,11 +27,13 @@
     "formFontOptionNoto": "Noto",
     "formFontOptionOpenDyslexic": "Open Dyslexic",
     "settingsDialogTitle": "Modifier les préférences",
-    "settingsDialogDescription": "Modifiez vos préférences ici. Cliquez sur sauvegarder lorsque vous avez terminé.",
-    "commandPalette": "Palette de Commandes"
+    "settingsDialogDescription": "Modifiez vos préférences ici. Cliquez sur sauvegarder lorsque vous avez terminé."
   },
   "Hero": {
-    "heroTitle": "Salut 👋, je suis Clément",
+    "heroTitle": "Salut 👋, je m'appelle Clément",
+    "iam": "Je suis ",
+    "job": "Développeur Full-stack et étudiant en ingénierie logicielle ",
+    "experience": "ayant travaillé avec diverses technologies. Je développe des logiciels depuis plus de 3 ans, et je travaille actuellement chez ",
     "location": "Basé à",
     "city": "Rouen",
     "language": "Langues",
@@ -50,13 +41,22 @@
     "languagesListFull": "Anglais, Français",
     "getInTouch": "Me contacter"
   },
+  "Past": {
+    "title": "Expériences",
+    "1": {
+      "role": "Développeur FullStack (Apprentissage)"
+    },
+    "2": {
+      "role": "Développeur FullStack (Stage)"
+    }
+  },
+  "Certifications": {
+    "title": "Certifications",
+    "opquast": "875/1000 - Assurance Qualité"
+  },
   "Current": {
     "title": "Actuellement",
     "description": "Travaille sur l'application d'enquête marketing chez R3mScore.",
     "role": "Développeur FullStack"
-  },
-  "Footer": {
-    "message": "Fait avec passion, et beaucoup de café ...",
-    "copyright": "Clément OMNÈS"
   }
 }

@@ -1,18 +1,7 @@
 {
   "Generic": {
     "buttonSave": "Save changes",
-    "buttonCancel": "Cancel",
-    "settings": "Settings",
-    "appearance": "Appearance",
-    "contact": "Contact",
-    "language": "Language",
-    "actionLightMode": "Switch to Light Mode",
-    "actionDarkMode": "Switch to Dark Mode",
-    "commandPlaceholder": "Type a command or search...",
-    "noResults": "No results",
-    "hintNavigate": "↑↓ to navigate • Enter to run",
-    "hintClose": "Esc to close",
-    "copyEmail": "Copy Email"
+    "buttonCancel": "Cancel"
   },
   "Header": {
     "formLangLabel": "Language",
@@ -38,12 +27,13 @@
     "formFontOptionNoto": "Noto",
     "formFontOptionOpenDyslexic": "Open Dyslexic",
     "settingsDialogTitle": "Edit your preferences",
-    "settingsDialogDescription": "Change your preferences here. Click save when you're done.",
-    "buttonLabel": "Let's Work Together",
-    "commandPalette": "Command Palette"
+    "settingsDialogDescription": "Change your preferences here. Click save when you're done."
   },
   "Hero": {
     "heroTitle": "Hi 👋, I'm Clément",
+    "iam": "I am a ",
+    "job": "Full-stack developer and Software Engineering student ",
+    "experience": "with experience working with various technologies. Been building software for over 3 years, and I currently work at ",
     "location": "Based in",
     "city": "Rouen",
     "language": "Languages",
@@ -58,10 +48,15 @@
   },
   "Past": {
     "title": "Experiences",
-    "role": "FullStack Developer (InternShip)"
+    "1": {
+      "role": "FullStack Developer (Apprenticeship)"
+    },
+    "2": {
+      "role": "FullStack Developer (InternShip)"
+    }
   },
-  "Footer": {
-    "message": "Made with passion, and a lot of coffee ...",
-    "copyright": "Clément OMNÈS"
+  "Certifications": {
+    "title": "Certifications",
+    "opquast": "875/1000 - Quality Assurance"
   }
 }

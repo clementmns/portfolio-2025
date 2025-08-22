@@ -35,12 +35,9 @@ export default function HeroSection() {
             {t("heroTitle")}
           </h1>
           <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-prose">
-            I&apos;m a {t("location")}{" "}
-            <span className="font-medium text-foreground">
-              Full-stack developer and Software Engineering student{" "}
-            </span>
-            with experience working with various technologies. Been building
-            software for over 3 years, and I currently work at{" "}
+            {t("iam")}
+            <span className="font-medium text-foreground">{t("job")}</span>
+            {t("experience")}
             <a
               href="https://r3mscore.com"
               target="_blank"

@@ -1,3 +1,4 @@
+import Certifications from "../../components/sections/certifications";
 import CurrentCard from "../../components/sections/current";
 import HeroSection from "../../components/sections/hero";
 import PastCard from "../../components/sections/past";
@@ -10,13 +11,10 @@ export default function HomePage() {
         <div className="flex flex-col gap-4">
           <CurrentCard />
           <PastCard />
+          <Certifications />
         </div>
-        <div className="flex flex-col gap-4">
-          <CurrentCard />
-        </div>
-        <div className="flex flex-col gap-4">
-          <CurrentCard />
-        </div>
+        <div className="flex flex-col gap-4"></div>
+        <div className="flex flex-col gap-4"></div>
       </div>
     </div>
   );
