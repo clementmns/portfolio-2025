@@ -55,6 +55,10 @@
       "role": "FullStack Developer (InternShip)"
     }
   },
+  "About": {
+    "title": "About Me",
+    "about": "Passionate full-stack developer with a strong foundation in modern web technologies. I enjoy building scalable applications and learning new technologies to solve complex problems."
+  },
   "Certifications": {
     "title": "Certifications",
     "opquast": "875/1000 - Quality Assurance"

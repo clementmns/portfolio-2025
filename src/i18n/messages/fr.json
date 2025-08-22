@@ -54,6 +54,10 @@
     "title": "Certifications",
     "opquast": "875/1000 - Assurance Qualité"
   },
+  "About": {
+    "title": "À Propos",
+    "about": "Développeur full-stack passionné avec une solide base en technologies web modernes. J'aime créer des applications évolutives et apprendre de nouvelles technologies pour résoudre des problèmes complexes."
+  },
   "Current": {
     "title": "Actuellement",
     "description": "Travaille sur l'application d'enquête marketing chez R3mScore.",

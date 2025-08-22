@@ -35,24 +35,24 @@ export default function HeroSection() {
           >
             {t("heroTitle")}
           </h1>
-          <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-prose">
+          <p className="mt-4 text-lg leading-relaxed max-w-prose">
             {t("iam")}
-            <span className="font-medium text-foreground">{t("job")}</span>
+            <span className="font-semibold">{t("job")}</span>
             {t("experience")}
             <a
               href="https://r3mscore.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-foreground underline inline-flex items-center hover:text-primary transition-colors"
+              className="font-semibold underline inline-flex items-center hover:text-primary transition-colors"
             >
               R3mScore
               <HiExternalLink className="size-3 ml-1" />
             </a>
           </p>
-          <div className="mt-4">
+          <div className="mt-8">
             <dl className="flex flex-wrap gap-6 justify-center sm:justify-start">
               <div className="flex flex-col items-center sm:items-start gap-1 min-w-20">
-                <dt className="text-[10px] tracking-wide font-medium text-muted-foreground uppercase">
+                <dt className="text-[10px] tracking-wide font-semibold text-muted-foreground uppercase">
                   {t("location")}
                 </dt>
                 <dd>

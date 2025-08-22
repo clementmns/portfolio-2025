@@ -36,45 +36,43 @@ export default function PastCard() {
 
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="justify-start flex items-center gap-3">
         <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/30 dark:bg-primary/20">
           <HiBriefcase size={16} className="text-primary" />
         </div>
         <CardTitle>{t("title")}</CardTitle>
-        <CardContent className="gap-5 flex flex-col relative pt-2">
-          {experiences.map((exp, idx) => (
-            <div
-              key={exp.company + exp.role + idx}
-              className="flex items-start gap-3 w-full relative"
-            >
-              <LogoLink
-                href={exp.link}
-                logoSrc={exp.logo}
-                logoAlt={exp.company}
-                title={`View ${exp.company} logo`}
-              />
-              <div className="flex flex-col flex-1 min-w-0">
-                <div className="flex flex-col gap-0.5">
-                  <div className="flex items-baseline justify-between">
-                    <p className="font-semibold">{exp.company}</p>
-                    <p className="text-xs text-muted-foreground">
-                      <time dateTime={exp.start}>
-                        {formatRange(exp.start, exp.end)}
-                      </time>
-                    </p>
-                  </div>
-                  <p className="text-xs text-muted-foreground leading-snug">
-                    {exp.role}
+      </CardHeader>
+      <CardContent className="gap-5 flex flex-col relative pt-2 px-4">
+        {experiences.map((exp, idx) => (
+          <div
+            key={exp.company + exp.role + idx}
+            className="flex items-start gap-3 w-full relative"
+          >
+            <LogoLink
+              href={exp.link}
+              logoSrc={exp.logo}
+              logoAlt={exp.company}
+              title={`View ${exp.company} logo`}
+            />
+            <div className="flex flex-col flex-1 min-w-0">
+              <div className="flex flex-col gap-0.5">
+                <div className="flex items-baseline justify-between">
+                  <p className="font-semibold">{exp.company}</p>
+                  <p className="text-sm text-muted-foreground">
+                    <time dateTime={exp.start}>
+                      {formatRange(exp.start, exp.end)}
+                    </time>
                   </p>
                 </div>
+                <p className="text-sm leading-snug">{exp.role}</p>
               </div>
-              {idx < experiences.length - 1 && (
-                <div className="absolute left-[15px] top-[40px] h-full w-[2px] bg-muted"></div>
-              )}
             </div>
-          ))}
-        </CardContent>
-      </CardHeader>
+            {idx < experiences.length - 1 && (
+              <div className="absolute left-[15px] top-[40px] h-full w-[2px] bg-muted"></div>
+            )}
+          </div>
+        ))}
+      </CardContent>
     </Card>
   );
 }
