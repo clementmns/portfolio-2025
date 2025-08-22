@@ -1,9 +1,12 @@
-import AboutCard from "@/components/sections/about";
-import Certifications from "@/components/sections/certifications";
-import CurrentCard from "@/components/sections/current";
-import HeroSection from "@/components/sections/hero";
-import ExperiencesCard from "@/components/sections/experiences";
-import TrainingsCard from "../../components/sections/trainings";
+import AboutCard from "@/components/cards/about";
+import Certifications from "@/components/cards/certifications";
+import HeroSection from "@/components/cards/hero";
+import ExperiencesCard from "@/components/cards/experiences";
+import TrainingsCard from "../../components/cards/trainings";
+import CurrentCard from "@/components/cards/current";
+// import SkillsCard from "@/components/sections/skills"; // TODO: Create SkillsCard component
+// import ProjectsCard from "@/components/sections/projects"; // TODO: Create ProjectsCard component
+// import FunCard from "@/components/sections/music"; // TODO: Create MusicCard component (fun card)
 
 export default function HomePage() {
   return (
@@ -16,10 +19,13 @@ export default function HomePage() {
           <Certifications />
         </div>
         <div className="flex flex-col gap-4">
-          <TrainingsCard />
+          {/* <SkillsCard /> */}
+          {/* <ProjectsCard /> */}
         </div>
         <div className="flex flex-col gap-4">
           <AboutCard />
+          <TrainingsCard />
+          {/* <FunCard /> */}
         </div>
       </div>
     </div>

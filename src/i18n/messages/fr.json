@@ -50,6 +50,17 @@
       "role": "Développeur FullStack (Stage)"
     }
   },
+  "Trainings": {
+    "title": "Diplômes",
+    "1": {
+      "school": "CESI",
+      "program": "Ingénieur Informatique (en apprentissage)"
+    },
+    "2": {
+      "school": "Université de Rouen",
+      "program": "BUT Métiers du Multimédia et de l'Internet"
+    }
+  },
   "Certifications": {
     "title": "Certifications",
     "opquast": "875/1000 - Assurance Qualité"

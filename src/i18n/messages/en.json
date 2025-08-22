@@ -56,10 +56,10 @@
     }
   },
   "Trainings": {
-    "title": "Trainings",
+    "title": "Training",
     "1": {
       "school": "CESI",
-      "program": "Master's degree in Computer Science (in apprenticeship)"
+      "program": "Software Engineering degree (in apprenticeship)"
     },
     "2": {
       "school": "University of Rouen",
@@ -67,7 +67,7 @@
     }
   },
   "About": {
-    "title": "About Me",
+    "title": "About",
     "about": "Passionate full-stack developer with a strong foundation in modern web technologies. I enjoy building scalable applications and learning new technologies to solve complex problems."
   },
   "Certifications": {

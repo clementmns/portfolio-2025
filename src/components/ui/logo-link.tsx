@@ -37,7 +37,7 @@ export function LogoLink({
       href={href}
       {...linkProps}
       className={cn(
-        "relative z-10 flex-shrink-0 bg-white border w-fit p-2 rounded-sm shadow-xs group hover:shadow-md transition-all duration-200 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] cursor-pointer overflow-hidden",
+        "relative z-10 flex-shrink-0 bg-white border w-fit p-2 rounded-sm shadow-xs group transition-all duration-200 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] cursor-pointer overflow-hidden",
         className
       )}
       title={title}
