@@ -25,14 +25,15 @@ import {
 import { useTranslations } from "next-intl";
 import { SettingsForm } from "./settings-form";
 import { HiCog6Tooth } from "react-icons/hi2";
+import { useState, useEffect } from "react";
 
 export function SettingsDialog() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const t = useTranslations("Header");
   const tg = useTranslations("Generic");
 
-  React.useEffect(() => {
+  useEffect(() => {
     function handler() {
       setOpen(true);
     }

@@ -1,7 +1,9 @@
 {
   "Generic": {
     "buttonSave": "Save changes",
-    "buttonCancel": "Cancel"
+    "buttonCancel": "Cancel",
+    "buttonClose": "Close",
+    "buttonShowMore": "Show More"
   },
   "Header": {
     "formLangLabel": "Language",
@@ -73,5 +75,20 @@
   "Certifications": {
     "title": "Certifications",
     "opquast": "875/1000 - Quality Assurance"
+  },
+  "Skills": {
+    "title": "Skills",
+    "development": "Development",
+    "languages": "Languages",
+    "frameworks": "Frameworks & Libraries",
+    "softSkills": "Professional Skills",
+    "communication": "Communication",
+    "technical": "Technical",
+    "methodology": "Methodology & Tools",
+    "designSkills": "Design Skills",
+    "teamWorking": "Team Working",
+    "forceOfProposal": "Force of Proposal",
+    "stressManagement": "Stress Management",
+    "timeManagement": "Time Management"
   }
 }
