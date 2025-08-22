@@ -13,10 +13,6 @@ export default function Background() {
         className="-z-1000 [mask-image:radial-gradient(60%_60%_at_50%_40%,black,transparent)]"
         width={24}
         height={24}
-        cx={1}
-        cy={1}
-        cr={1}
-        glow={true}
       />
     </>
   );

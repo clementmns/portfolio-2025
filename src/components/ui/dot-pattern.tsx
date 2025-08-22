@@ -16,6 +16,7 @@ import React, { useEffect, useId, useRef, useState } from "react";
  * @param {number} [cr=1] - The radius of each dot
  * @param {string} [className] - Additional CSS classes to apply to the SVG container
  * @param {boolean} [glow=false] - Whether dots should have a glowing animation effect
+ * @param {number} [maxAnimatedDots=50] - Maximum number of dots to animate when glow is true
  */
 interface DotPatternProps extends React.SVGProps<SVGSVGElement> {
   width?: number;
@@ -27,6 +28,7 @@ interface DotPatternProps extends React.SVGProps<SVGSVGElement> {
   cr?: number;
   className?: string;
   glow?: boolean;
+  maxAnimatedDots?: number;
   [key: string]: unknown;
 }
 
@@ -49,27 +51,28 @@ interface DotPatternProps extends React.SVGProps<SVGSVGElement> {
  *   width={20}
  *   height={20}
  *   glow={true}
+ *   maxAnimatedDots={30}
  *   className="opacity-50"
  * />
  *
  * @notes
  * - The component is client-side only ("use client")
  * - Automatically responds to container size changes
- * - When glow is enabled, dots will animate with random delays and durations
- * - Uses Motion for animations
+ * - When glow is enabled, only a subset of dots animate for better performance
+ * - Uses Motion for animations on animated dots, static SVG circles for non-animated dots
  * - Dots color can be controlled via the text color utility classes
+ * - Performance is optimized by limiting animated dots via maxAnimatedDots prop
  */
 
 export function DotPattern({
   width = 16,
   height = 16,
-  x = 0,
-  y = 0,
   cx = 1,
   cy = 1,
   cr = 1,
   className,
   glow = false,
+  maxAnimatedDots = 50,
   ...props
 }: DotPatternProps) {
   const id = useId();
@@ -89,23 +92,63 @@ export function DotPattern({
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
-  const dots = Array.from(
-    {
-      length:
-        Math.ceil(dimensions.width / width) *
-        Math.ceil(dimensions.height / height),
-    },
-    (_, i) => {
-      const col = i % Math.ceil(dimensions.width / width);
-      const row = Math.floor(i / Math.ceil(dimensions.width / width));
+  const { staticDots, animatedDots } = React.useMemo(() => {
+    const totalCols = Math.ceil(dimensions.width / width);
+    const totalRows = Math.ceil(dimensions.height / height);
+    const totalDots = totalCols * totalRows;
+
+    const allDots = Array.from({ length: totalDots }, (_, i) => {
+      const col = i % totalCols;
+      const row = Math.floor(i / totalCols);
       return {
         x: col * width + cx,
         y: row * height + cy,
-        delay: Math.random() * 5,
-        duration: Math.random() * 3 + 2,
+        key: `${col}-${row}`,
       };
+    });
+
+    if (!glow) {
+      return { staticDots: allDots, animatedDots: [] };
     }
-  );
+
+    const numAnimated = Math.min(maxAnimatedDots, totalDots);
+    const animatedIndices = new Set<number>();
+
+    while (
+      animatedIndices.size < numAnimated &&
+      animatedIndices.size < totalDots
+    ) {
+      animatedIndices.add(Math.floor(Math.random() * totalDots));
+    }
+
+    const staticDotsArray: typeof allDots = [];
+    const animatedDotsArray: Array<
+      (typeof allDots)[0] & { delay: number; duration: number }
+    > = [];
+
+    allDots.forEach((dot, index) => {
+      if (animatedIndices.has(index)) {
+        animatedDotsArray.push({
+          ...dot,
+          delay: Math.random() * 5,
+          duration: Math.random() * 3 + 2,
+        });
+      } else {
+        staticDotsArray.push(dot);
+      }
+    });
+
+    return { staticDots: staticDotsArray, animatedDots: animatedDotsArray };
+  }, [
+    dimensions.width,
+    dimensions.height,
+    width,
+    height,
+    cx,
+    cy,
+    glow,
+    maxAnimatedDots,
+  ]);
 
   return (
     <svg
@@ -123,34 +166,38 @@ export function DotPattern({
           <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
         </radialGradient>
       </defs>
-      {dots.map((dot, index) => (
-        <motion.circle
-          key={`${dot.x}-${dot.y}`}
+
+      {staticDots.map((dot) => (
+        <circle
+          key={dot.key}
           cx={dot.x}
           cy={dot.y}
           r={cr}
-          fill={glow ? `url(#${id}-gradient)` : "currentColor"}
+          fill="currentColor"
           className="text-neutral-400/60"
-          initial={glow ? { opacity: 0.2, scale: 1 } : {}}
-          animate={
-            glow
-              ? {
-                  opacity: [0.2, 0.6, 0.2],
-                  scale: [1, 1.5, 1],
-                }
-              : {}
-          }
-          transition={
-            glow
-              ? {
-                  duration: dot.duration,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  delay: dot.delay,
-                  ease: "easeInOut",
-                }
-              : {}
-          }
+        />
+      ))}
+
+      {animatedDots.map((dot) => (
+        <motion.circle
+          key={dot.key}
+          cx={dot.x}
+          cy={dot.y}
+          r={cr}
+          fill={`url(#${id}-gradient)`}
+          className="text-neutral-400/60"
+          initial={{ opacity: 0.2, scale: 1 }}
+          animate={{
+            opacity: [0.2, 0.6, 0.2],
+            scale: [1, 1.5, 1],
+          }}
+          transition={{
+            duration: dot.duration,
+            repeat: Infinity,
+            repeatType: "reverse",
+            delay: dot.delay,
+            ease: "easeInOut",
+          }}
         />
       ))}
     </svg>
