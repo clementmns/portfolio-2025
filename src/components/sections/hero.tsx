@@ -1,3 +1,4 @@
+"use client";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
@@ -48,7 +49,7 @@ export default function HeroSection() {
               <HiExternalLink className="size-3 ml-1" />
             </a>
           </p>
-          <div className="mt-6">
+          <div className="mt-4">
             <dl className="flex flex-wrap gap-6 justify-center sm:justify-start">
               <div className="flex flex-col items-center sm:items-start gap-1 min-w-20">
                 <dt className="text-[10px] tracking-wide font-medium text-muted-foreground uppercase">
@@ -59,7 +60,7 @@ export default function HeroSection() {
                     <TooltipTrigger asChild>
                       <Badge
                         variant="outline"
-                        className="px-2 py-1 text-xs font-medium cursor-help group"
+                        className="px-2 py-1 text-xs font-medium cursor-help group bg-background"
                         aria-label="Open map with location of Rouen"
                       >
                         <HiMapPin className="text-primary group-hover:rotate-12 transition-transform" />{" "}
@@ -81,7 +82,7 @@ export default function HeroSection() {
                     <TooltipTrigger asChild>
                       <Badge
                         variant="outline"
-                        className="px-2 py-1 text-xs font-medium cursor-help group"
+                        className="px-2 py-1 text-xs font-medium cursor-help group bg-background"
                         aria-label={
                           t("languagesListFull") || t("languagesList")
                         }
