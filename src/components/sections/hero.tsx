@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { HiMapPin } from "react-icons/hi2";
-import { HiLanguage } from "react-icons/hi2";
+import { IoLanguage } from "react-icons/io5";
 import { HiIdentification } from "react-icons/hi2";
 import Link from "next/link";
 import GMT from "../gmt";
@@ -89,7 +89,7 @@ export default function HeroSection() {
                           t("languagesListFull") || t("languagesList")
                         }
                       >
-                        <HiLanguage className="group-hover:rotate-12 transition-transform" />{" "}
+                        <IoLanguage className="text-primary group-hover:rotate-12 transition-transform" />{" "}
                         {t("languagesList")}
                       </Badge>
                     </TooltipTrigger>
