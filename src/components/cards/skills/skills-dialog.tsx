@@ -32,6 +32,7 @@ import { DialogTrigger } from "@radix-ui/react-dialog";
 import { Button } from "../../ui/button";
 import { useTranslations } from "next-intl";
 import { useMediaQuery } from "../../hooks/use-media-query";
+import { useDialogRoute } from "../../hooks/use-dialog-route";
 import {
   Drawer,
   DrawerClose,
@@ -56,6 +57,7 @@ export default function SkillsCardDialog() {
   const t = useTranslations("Skills");
   const tg = useTranslations("Generic");
   const isDesktop = useMediaQuery("(min-width: 768px)");
+  const { open, onOpenChange } = useDialogRoute("skills");
 
   const skillCategories: SkillCategory[] = [
     {
@@ -184,7 +186,7 @@ export default function SkillsCardDialog() {
 
   if (isDesktop) {
     return (
-      <Dialog>
+      <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogTrigger asChild>
           <Button variant="ghost" className="w-full">
             <HiPlus className="w-4 h-4 mr-2" />
@@ -202,7 +204,7 @@ export default function SkillsCardDialog() {
   }
 
   return (
-    <Drawer>
+    <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerTrigger asChild>
         <Button variant="ghost" className="w-full">
           <HiPlus className="w-4 h-4 mr-2" />

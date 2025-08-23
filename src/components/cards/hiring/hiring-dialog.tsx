@@ -11,6 +11,7 @@ import { DialogTrigger } from "@radix-ui/react-dialog";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import { useMediaQuery } from "@/components/hooks/use-media-query";
+import { useDialogRoute } from "@/components/hooks/use-dialog-route";
 import {
   Drawer,
   DrawerClose,
@@ -24,6 +25,7 @@ export default function HiringDialog() {
   const t = useTranslations("Hiring");
   const tg = useTranslations("Generic");
   const isDesktop = useMediaQuery("(min-width: 768px)");
+  const { open, onOpenChange } = useDialogRoute("hiring");
 
   const content = () => {
     return (
@@ -70,7 +72,7 @@ export default function HiringDialog() {
 
   if (isDesktop) {
     return (
-      <Dialog>
+      <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogTrigger asChild>
           <Button variant="ghost" className="w-full">
             <HiPlus className="w-4 h-4 mr-2" />
@@ -88,7 +90,7 @@ export default function HiringDialog() {
   }
 
   return (
-    <Drawer>
+    <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerTrigger asChild>
         <Button variant="ghost" className="w-full">
           <HiPlus className="w-4 h-4 mr-2" />

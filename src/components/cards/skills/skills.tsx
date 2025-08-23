@@ -11,6 +11,8 @@ import {
 } from "react-icons/si";
 import { Badge } from "@/components/ui/badge";
 import SkillsCardDialog from "./skills-dialog";
+import { SkillsFullContent } from "./skills-content";
+import { SeoHidden } from "@/components/seo/seo-hidden";
 
 type Skill = {
   name: string;
@@ -43,7 +45,7 @@ export default function SkillsCard() {
         <CardTitle>{t("title")}</CardTitle>
       </CardHeader>
       <CardContent className="px-4 space-y-4">
-        <div className="flex flex-row flex-wrap justify-between sm:flex-col gap-2">
+        <div className="flex flex-row flex-wrap justify-between sm:flex-col gap-2 m-0">
           {hypeStack.map((skill) => {
             const IconComponent = skill.icon;
             return (
@@ -59,6 +61,9 @@ export default function SkillsCard() {
           })}
           <SkillsCardDialog />
         </div>
+        <SeoHidden id="skills-full-text">
+          <SkillsFullContent />
+        </SeoHidden>
       </CardContent>
     </Card>
   );

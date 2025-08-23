@@ -9,6 +9,8 @@ import {
   HiArrowTrendingUp,
 } from "react-icons/hi2";
 import HiringDialog from "./hiring-dialog";
+import { HiringFullContent } from "./hiring-content";
+import { SeoHidden } from "@/components/seo/seo-hidden";
 
 type Chip = {
   icon: React.ComponentType<{ className?: string }>;
@@ -35,31 +37,36 @@ export default function HiringCard() {
         <CardTitle>{t("title")}</CardTitle>
       </CardHeader>
       <CardContent className="px-4 space-y-4">
-        <p className="text-[13px] leading-snug">{t("hybridPitch")}</p>
-        <div className="flex flex-wrap gap-2 text-[11px] font-medium mt-6">
-          {chips.map(({ icon: Icon, key }) => (
-            <span
-              key={key}
-              className="flex items-center gap-1 rounded-md border bg-muted/50 dark:bg-muted/20 px-2 py-1"
-            >
-              <Icon className="w-3 h-3 text-primary" />
-              {t(key)}
-            </span>
-          ))}
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-[10px] uppercase tracking-wide font-semibold mt-4">
-          {t("verbs")
-            .split(",")
-            .map((verb) => (
-              <div
-                key={verb}
-                className="rounded-md bg-primary/10 dark:bg-primary/15 text-primary py-2"
+        <div className="m-0 flex flex-col gap-4">
+          <p className="text-[13px] leading-snug">{t("hybridPitch")}</p>
+          <div className="flex flex-wrap gap-2 text-[11px] font-medium mt-2">
+            {chips.map(({ icon: Icon, key }) => (
+              <span
+                key={key}
+                className="flex items-center gap-1 rounded-md border bg-muted/50 dark:bg-muted/20 px-2 py-1"
               >
-                {verb.trim()}
-              </div>
+                <Icon className="w-3 h-3 text-primary" />
+                {t(key)}
+              </span>
             ))}
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-[10px] uppercase tracking-wide font-semibold">
+            {t("verbs")
+              .split(",")
+              .map((verb) => (
+                <div
+                  key={verb}
+                  className="rounded-md bg-primary/10 dark:bg-primary/15 text-primary py-2"
+                >
+                  {verb.trim()}
+                </div>
+              ))}
+          </div>
+          <HiringDialog />
         </div>
-        <HiringDialog />
+        <SeoHidden id="hiring-full-text">
+          <HiringFullContent />
+        </SeoHidden>
       </CardContent>
     </Card>
   );
