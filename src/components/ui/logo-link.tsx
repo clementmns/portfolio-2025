@@ -5,7 +5,7 @@ import { HiExternalLink } from "react-icons/hi";
 import { cn } from "@/lib/utils";
 
 interface LogoLinkProps {
-  href: string;
+  href?: string;
   logoSrc: string;
   logoAlt: string;
   title: string;
@@ -21,7 +21,7 @@ export function LogoLink({
   logoAlt,
   title,
   className,
-  logoSize = 44,
+  logoSize = 40,
   iconSize = 20,
   external = true,
 }: LogoLinkProps) {
@@ -32,31 +32,53 @@ export function LogoLink({
       }
     : {};
 
-  return (
-    <Link
-      href={href}
-      {...linkProps}
-      className={cn(
-        "relative z-10 flex-shrink-0 bg-white border w-fit p-2 rounded-sm shadow-xs group transition-all duration-200 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] cursor-pointer overflow-hidden",
-        className
-      )}
-      title={title}
-      aria-label={external ? `Open ${title} (external link)` : `Go to ${title}`}
-    >
+  const content = (
+    <>
       <Image
         src={logoSrc}
         alt={logoAlt}
         width={logoSize}
         height={logoSize}
-        className="rounded-xs transition-all duration-300 group-hover:blur-sm"
+        className={cn(
+          "rounded-sm transition-all duration-300",
+          href && "group-hover:blur-sm"
+        )}
       />
-      <div className="absolute inset-0 bg-background/40 backdrop-blur-xs rounded-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-        <HiExternalLink
-          size={iconSize}
-          className="text-foreground"
-          aria-hidden="true"
-        />
+      {href && (
+        <div className="absolute inset-0 bg-background/40 backdrop-blur-xs rounded-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+          <HiExternalLink
+            size={iconSize}
+            className="text-foreground"
+            aria-hidden="true"
+          />
+        </div>
+      )}
+    </>
+  );
+
+  const baseClassName = cn(
+    "relative z-10 flex-shrink-0 bg-white border w-fit p-2 rounded-sm shadow-xs transition-all duration-200 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] overflow-hidden",
+    href ? "group cursor-pointer" : "cursor-default",
+    className
+  );
+
+  if (!href) {
+    return (
+      <div className={baseClassName} title={title}>
+        {content}
       </div>
+    );
+  }
+
+  return (
+    <Link
+      href={href}
+      {...linkProps}
+      className={baseClassName}
+      title={title}
+      aria-label={external ? `Open ${title} (external link)` : `Go to ${title}`}
+    >
+      {content}
     </Link>
   );
 }

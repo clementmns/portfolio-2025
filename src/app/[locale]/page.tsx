@@ -7,7 +7,7 @@ import CurrentCard from "@/components/cards/current";
 import SkillsCard from "@/components/cards/skills/skills";
 import HiringCard from "@/components/cards/hiring/hiring";
 import ToolsCard from "@/components/cards/tools";
-// import ProjectsCard from "@/components/cards/projects/projects";
+import ProjectsCard from "@/components/cards/projects/projects";
 // import FunCard from "@/components/cards/music"; // TODO: Create FunCard component
 
 export default function HomePage() {
@@ -21,7 +21,7 @@ export default function HomePage() {
           <Certifications />
         </div>
         <div className="flex flex-col gap-4">
-          {/* <ProjectsCard /> */}
+          <ProjectsCard />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
             <div>
               <SkillsCard />

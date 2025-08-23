@@ -59,11 +59,13 @@
     "title": "Diplômes",
     "1": {
       "school": "CESI",
-      "program": "Diplôme d'Ingénieur Informatique"
+      "program": "Diplôme d'Ingénieur Informatique",
+      "location": "Rouen, France"
     },
     "2": {
       "school": "Université de Rouen",
-      "program": "BUT Métiers du Multimédia et de l'Internet"
+      "program": "BUT Métiers du Multimédia et de l'Internet",
+      "location": "Elbeuf, France"
     }
   },
   "Certifications": {
@@ -113,6 +115,19 @@
     "preference1": "Culture d'entreprise exceptionnelle. Je valorise les environnements qui favorisent la croissance, la collaboration et l'innovation.",
     "preference2": "Remote-friendly. Je crois au pouvoir des arrangements de travail flexibles et de la collaboration asynchrone.",
     "preference3": "Projets porteurs de sens. Je suis passionné par le travail sur des produits qui font une vraie différence dans la vie des gens."
+  },
+  "Projects": {
+    "title": "Projets",
+    "selenite": {
+      "name": "Selenite: Lost Contact",
+      "role": "Lead Développeur",
+      "description": "Jeu de tir spatial sur la Lune où les joueurs doivent survivre contre des vagues d'ennemis de plus en plus difficiles."
+    },
+    "alm": {
+      "name": "ALM Voting App",
+      "role": "Ingénieur Logiciel",
+      "description": "Application de vote en temps réel pour les supporters de basketball pour voter pour le meilleur joueur du match."
+    }
   },
   "Tools": {
     "title": "Outils",

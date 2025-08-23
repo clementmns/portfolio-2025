@@ -116,6 +116,19 @@
     "preference2": "Remote-friendly. I believe in the power of flexible work arrangements and asynchronous collaboration.",
     "preference3": "Meaningful projects. I'm passionate about working on products that make a real difference in people's lives."
   },
+  "Projects": {
+    "title": "Projects",
+    "selenite": {
+      "name": "Selenite: Lost Contact",
+      "role": "Lead Developer",
+      "description": "Space shooter set on the Moon where players must survive against increasingly difficult waves of enemies."
+    },
+    "alm": {
+      "name": "ALM Voting App",
+      "role": "Software Engineer",
+      "description": "Real-time voting application for basketball supporters to vote for best player of the match."
+    }
+  },
   "Tools": {
     "title": "Tools",
     "environment": "Environments",
