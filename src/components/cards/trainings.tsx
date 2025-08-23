@@ -7,6 +7,7 @@ import { LogoLink } from "@/components/ui/logo-link";
 type Training = {
   school: string;
   program: string;
+  location: string;
   logo: string;
   link: string;
   start: string;
@@ -20,6 +21,7 @@ export default function TrainingsCard() {
     {
       school: t("1.school"),
       program: t("1.program"),
+      location: t("1.location"),
       link: "https://www.cesi.fr/formation/ingenieur-e-informatique-cursus-en-3-ans-par-lapprentissage-2513617/",
       logo: "/schools/cesi.png",
       start: "2025-10-06",
@@ -28,6 +30,7 @@ export default function TrainingsCard() {
     {
       school: t("2.school"),
       program: t("2.program"),
+      location: t("2.location"),
       link: "https://formation.univ-rouen.fr/fr/catalogue-de-l-offre-de-formation/but-BUT/but-metiers-du-multimedia-et-de-l-internet-L4S5PA8M.html",
       logo: "/schools/univ-rouen.png",
       start: "2022-09-01",
@@ -43,7 +46,7 @@ export default function TrainingsCard() {
         </div>
         <CardTitle>{t("title")}</CardTitle>
       </CardHeader>
-      <CardContent className="gap-5 flex flex-col relative pt-2 px-4">
+      <CardContent className="gap-10 flex flex-col relative pt-2 px-4">
         {trainings.map((tr, idx) => (
           <div
             key={tr.school + tr.program + idx}
@@ -57,15 +60,16 @@ export default function TrainingsCard() {
             />
             <div className="flex flex-col flex-1 min-w-0">
               <div className="flex flex-col gap-0.5">
-                <div className="flex items-baseline justify-between">
+                <div className="flex flex-col gap-0">
                   <p className="font-semibold">{tr.school}</p>
                   <p className="text-sm text-muted-foreground">
                     <time dateTime={tr.start}>
-                      {formatRange(tr.start, tr.end, "year")}
+                      {formatRange(tr.start, tr.end)}
                     </time>
                   </p>
                 </div>
-                <p className="text-sm leading-snug">{tr.program}</p>
+                <p className="leading-snug font-medium mt-2">{tr.program}</p>
+                <p className="text-sm text-muted-foreground">{tr.location}</p>
               </div>
             </div>
             {idx < trainings.length - 1 && (

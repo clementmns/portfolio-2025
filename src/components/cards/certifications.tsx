@@ -48,8 +48,8 @@ export default function Certifications() {
               title={`View ${cert.title} certification`}
             />
             <div className="flex flex-col flex-1 min-w-0">
-              <div className="flex flex-col gap-0.5">
-                <div className="flex items-baseline justify-between">
+              <div className="flex flex-col">
+                <div className="flex flex-col gap-0">
                   <p className="font-semibold">{cert.title}</p>
                   <p className="text-sm text-muted-foreground">
                     <time dateTime={cert.start}>
@@ -57,7 +57,7 @@ export default function Certifications() {
                     </time>
                   </p>
                 </div>
-                <p className="text-sm leading-snug">{cert.desc}</p>
+                <p className="leading-snug font-medium">{cert.desc}</p>
               </div>
             </div>
             {idx < certifications.length - 1 && (

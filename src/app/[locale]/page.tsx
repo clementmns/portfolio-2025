@@ -7,12 +7,12 @@ import CurrentCard from "@/components/cards/current";
 import SkillsCard from "@/components/cards/skills/skills";
 import HiringCard from "@/components/cards/hiring/hiring";
 import ToolsCard from "@/components/cards/tools";
-// import ProjectsCard from "@/components/cards/projects"; // TODO: Create ProjectsCard component
+// import ProjectsCard from "@/components/cards/projects/projects";
 // import FunCard from "@/components/cards/music"; // TODO: Create FunCard component
 
 export default function HomePage() {
   return (
-    <div className="container mx-auto max-w-6xl px-4 py-22 flex flex-col items-center gap-10">
+    <div className="container mx-auto max-w-7xl px-4 py-22 flex flex-col items-center gap-10">
       <HeroSection />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
         <div className="flex flex-col gap-4">

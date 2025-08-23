@@ -44,19 +44,22 @@
     "getInTouch": "Me contacter"
   },
   "Experiences": {
+    "apprenticeship": "Apprentissage",
+    "internship": "Stage",
+    "remote": "Télétravail, France",
     "title": "Expériences",
     "1": {
-      "role": "Développeur FullStack (Apprentissage)"
+      "role": "Développeur FullStack"
     },
     "2": {
-      "role": "Développeur FullStack (Stage)"
+      "role": "Développeur Front-End"
     }
   },
   "Trainings": {
     "title": "Diplômes",
     "1": {
       "school": "CESI",
-      "program": "Ingénieur Informatique (en apprentissage)"
+      "program": "Diplôme d'Ingénieur Informatique"
     },
     "2": {
       "school": "Université de Rouen",
