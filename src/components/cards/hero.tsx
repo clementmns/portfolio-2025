@@ -41,7 +41,7 @@ export default function HeroSection() {
           >
             {t("heroTitle")}
           </h1>
-          <p className="mt-4 text-lg leading-relaxed max-w-prose">
+          <h2 className="mt-4 text-lg leading-relaxed max-w-prose">
             {t("iam")}
             <span className="font-semibold">{t("job")}</span>
             {t("experience")}
@@ -54,7 +54,7 @@ export default function HeroSection() {
               R3mScore
               <HiExternalLink className="size-3 ml-1" />
             </a>
-          </p>
+          </h2>
           <div className="mt-8">
             <dl className="flex flex-wrap gap-6 justify-center sm:justify-start">
               <div className="flex flex-col items-center sm:items-start gap-1 min-w-20">
@@ -73,7 +73,11 @@ export default function HeroSection() {
                         {t("city")}
                       </Badge>
                     </TooltipTrigger>
-                    <TooltipContent side="top" className="text-[11px]">
+                    <TooltipContent
+                      variant="outline"
+                      side="top"
+                      className="text-[11px]"
+                    >
                       <GMT />
                     </TooltipContent>
                   </Tooltip>
@@ -99,6 +103,7 @@ export default function HeroSection() {
                     </TooltipTrigger>
                     <TooltipContent
                       side="top"
+                      variant="outline"
                       className="text-sm font-medium whitespace-nowrap font-mono"
                     >
                       {t("languagesListFull") || t("languagesList")}

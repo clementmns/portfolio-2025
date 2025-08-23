@@ -11,6 +11,7 @@ import {
 import HiringDialog from "./hiring-dialog";
 import { HiringFullContent } from "./hiring-content";
 import { SeoHidden } from "@/components/seo/seo-hidden";
+import { CardIcon } from "@/components/ui/card-icon";
 
 type Chip = {
   icon: React.ComponentType<{ className?: string }>;
@@ -31,9 +32,7 @@ export default function HiringCard() {
   return (
     <Card>
       <CardHeader className="justify-start flex items-center gap-3">
-        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/30 dark:bg-primary/20 shrink-0">
-          <HiSparkles size={16} className="text-primary" />
-        </div>
+        <CardIcon Icon={HiSparkles} />
         <CardTitle>{t("title")}</CardTitle>
       </CardHeader>
       <CardContent className="px-4 space-y-4">
@@ -56,7 +55,7 @@ export default function HiringCard() {
               .map((verb) => (
                 <div
                   key={verb}
-                  className="rounded-md bg-primary/10 dark:bg-primary/15 text-primary py-2"
+                  className="rounded-md border border-primary/5 bg-primary/10 dark:bg-primary/20 text py-2"
                 >
                   {verb.trim()}
                 </div>

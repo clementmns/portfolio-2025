@@ -9,6 +9,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { CardIcon } from "@/components/ui/card-icon";
 
 type Experience = {
   company: string;
@@ -52,9 +53,7 @@ export default function ExperiencesCard() {
   return (
     <Card>
       <CardHeader className="justify-start flex items-center gap-3">
-        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/30 dark:bg-primary/20 shrink-0">
-          <HiBriefcase size={16} className="text-primary" />
-        </div>
+        <CardIcon Icon={HiBriefcase} />
         <CardTitle>{t("title")}</CardTitle>
       </CardHeader>
       <CardContent className="gap-10 flex flex-col relative pt-2 px-4">

@@ -188,7 +188,7 @@ export default function SkillsCardDialog() {
     return (
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogTrigger asChild>
-          <Button variant="ghost" className="w-full">
+          <Button variant="outline" className="w-full">
             <HiPlus className="w-4 h-4 mr-2" />
             {tg("buttonShowMore")}
           </Button>
@@ -206,7 +206,7 @@ export default function SkillsCardDialog() {
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerTrigger asChild>
-        <Button variant="ghost" className="w-full">
+        <Button variant="outline" className="w-full">
           <HiPlus className="w-4 h-4 mr-2" />
           {tg("buttonShowMore")}
         </Button>

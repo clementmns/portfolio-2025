@@ -6,6 +6,7 @@ import { FaApple, FaLinux, FaWindows } from "react-icons/fa6";
 import { SiIntellijidea, SiNotion, SiJira } from "react-icons/si";
 import { IoTerminal } from "react-icons/io5";
 import { BiLogoVisualStudio } from "react-icons/bi";
+import { CardIcon } from "@/components/ui/card-icon";
 
 type Tool = {
   name: string;
@@ -57,9 +58,7 @@ export default function ToolsCard() {
   return (
     <Card>
       <CardHeader className="justify-start flex items-center gap-3">
-        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/30 dark:bg-primary/20 shrink-0">
-          <HiCpuChip size={16} className="text-primary" />
-        </div>
+        <CardIcon Icon={HiCpuChip} />
         <CardTitle>{t("title")}</CardTitle>
       </CardHeader>
       <CardContent className="px-4 space-y-5">

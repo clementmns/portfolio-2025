@@ -7,7 +7,7 @@ import CurrentCard from "@/components/cards/current";
 import SkillsCard from "@/components/cards/skills/skills";
 import HiringCard from "@/components/cards/hiring/hiring";
 import ToolsCard from "@/components/cards/tools";
-import ProjectsCard from "@/components/cards/projects/projects";
+import ProjectsCard from "@/components/cards/projects";
 // import FunCard from "@/components/cards/music"; // TODO: Create FunCard component
 
 export default function HomePage() {

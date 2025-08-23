@@ -12,6 +12,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import SkillsCardDialog from "./skills-dialog";
 import { SkillsFullContent } from "./skills-content";
+import { CardIcon } from "@/components/ui/card-icon";
 import { SeoHidden } from "@/components/seo/seo-hidden";
 
 type Skill = {
@@ -39,9 +40,7 @@ export default function SkillsCard() {
   return (
     <Card>
       <CardHeader className="justify-start flex items-center gap-3">
-        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/30 dark:bg-primary/20 shrink-0">
-          <HiUserGroup size={16} className="text-primary" />
-        </div>
+        <CardIcon Icon={HiUserGroup} />
         <CardTitle>{t("title")}</CardTitle>
       </CardHeader>
       <CardContent className="px-4 space-y-4">

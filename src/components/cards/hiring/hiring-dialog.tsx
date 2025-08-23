@@ -74,12 +74,12 @@ export default function HiringDialog() {
     return (
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogTrigger asChild>
-          <Button variant="ghost" className="w-full">
+          <Button variant="outline" className="w-full">
             <HiPlus className="w-4 h-4 mr-2" />
             {tg("buttonShowMore")}
           </Button>
         </DialogTrigger>
-        <DialogContent className="!max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+        <DialogContent className="!max-w-3xl w-full max-h-[80vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>{t("dialogTitle")}</DialogTitle>
           </DialogHeader>
@@ -92,7 +92,7 @@ export default function HiringDialog() {
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerTrigger asChild>
-        <Button variant="ghost" className="w-full">
+        <Button variant="outline" className="w-full">
           <HiPlus className="w-4 h-4 mr-2" />
           {tg("buttonShowMore")}
         </Button>
