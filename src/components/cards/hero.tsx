@@ -16,10 +16,12 @@ import { IoLanguage } from "react-icons/io5";
 import { HiIdentification } from "react-icons/hi2";
 import Link from "next/link";
 import GMT from "@/components/gmt";
+import { useMediaQuery } from "../hooks/use-media-query";
 
 export default function HeroSection() {
   const t = useTranslations("Hero");
   const locale = useLocale();
+  const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
     <section className="relative w-full" aria-labelledby="hero-title">
@@ -115,7 +117,14 @@ export default function HeroSection() {
                 asChild
                 aria-label="Download vCard"
               >
-                <Link href={`/vcard/${locale}-vcard.vcf`} download>
+                <Link
+                  href={
+                    isDesktop
+                      ? "mailto:contact@clementomnes.dev"
+                      : `/vcard/${locale}-vcard.vcf`
+                  }
+                  {...(!isDesktop && { download: true })}
+                >
                   <HiIdentification className="mr-1.5 group-hover:rotate-12 transition-transform" />{" "}
                   {t("getInTouch")}
                 </Link>

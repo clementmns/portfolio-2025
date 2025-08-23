@@ -10,7 +10,7 @@ import { useTranslations } from "next-intl";
 import { HiSun } from "react-icons/hi";
 import { LuSnowflake } from "react-icons/lu";
 import { FaLeaf, FaCanadianMapleLeaf } from "react-icons/fa6";
-import { Season } from "../../types/seasons";
+import { Season } from "@/types/seasons";
 import { HiCalendar } from "react-icons/hi";
 
 export function SeasonSelect() {

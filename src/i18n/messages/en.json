@@ -90,5 +90,25 @@
     "forceOfProposal": "Force of Proposal",
     "stressManagement": "Stress Management",
     "timeManagement": "Time Management"
+  },
+  "Hiring": {
+    "title": "Why hire me?",
+    "dialogTitle": "Let's work together",
+    "hybridPitch": "Shipping-focused software engineer: turn specs into reliable, measurable product increments.",
+    "chipDelivery": "SCRUM",
+    "chipQuality": "Clean + tested",
+    "chipCollab": "Clear comms",
+    "chipGrowth": "Continuous learning",
+    "chipInnovation": "AI-powered",
+    "verbs": "Design,Build,Improve,Scale",
+    "paragraph1": "I bring a strong technical foundation, problem-solving mindset, and dedication to delivering quality solutions that meet real user needs.",
+    "paragraph2": "I'm a Software Engineering student with hands-on experience in software engineering through my apprenticeship and internship roles. I'm passionate about learning and applying modern technologies to build meaningful solutions.",
+    "paragraph3": "I am a quick learner and I am always looking to learn new things. I can work independently and I love a challenge. Whether you're looking for a full-time engineer or an apprentice to join your team, I'd love to hear from you.",
+    "whyDifferentTitle": "What makes me different?",
+    "whyDifferent": "I believe in writing clean, maintainable code and creating user experiences that truly matter. My combination of technical skills and problem-solving helps me build solutions that are both functional and delightful.",
+    "preferencesTitle": "My preferences",
+    "preference1": "Amazing work culture. I value environments that promote growth, collaboration, and innovation.",
+    "preference2": "Remote-friendly. I believe in the power of flexible work arrangements and asynchronous collaboration.",
+    "preference3": "Meaningful projects. I'm passionate about working on products that make a real difference in people's lives."
   }
 }

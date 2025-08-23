@@ -1,5 +1,5 @@
 import React from "react";
-import { DotPattern } from "../ui/dot-pattern";
+import { DotPattern } from "@/components/ui/dot-pattern";
 
 export default function Background() {
   return (

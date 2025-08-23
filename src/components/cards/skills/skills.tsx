@@ -1,4 +1,3 @@
-"use client";
 import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { HiUserGroup } from "react-icons/hi2";
@@ -10,7 +9,7 @@ import {
   SiOpenjdk,
   SiTypescript,
 } from "react-icons/si";
-import { Badge } from "../../ui/badge";
+import { Badge } from "@/components/ui/badge";
 import SkillsCardDialog from "./skills-dialog";
 
 export default function SkillsCard() {
@@ -32,7 +31,7 @@ export default function SkillsCard() {
   return (
     <Card>
       <CardHeader className="justify-start flex items-center gap-3">
-        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/30 dark:bg-primary/20">
+        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/30 dark:bg-primary/20 shrink-0">
           <HiUserGroup size={16} className="text-primary" />
         </div>
         <CardTitle>{t("title")}</CardTitle>

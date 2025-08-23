@@ -90,5 +90,25 @@
     "forceOfProposal": "Force de proposition",
     "stressManagement": "Gestion du stress",
     "timeManagement": "Gestion du temps"
+  },
+  "Hiring": {
+    "title": "Pourquoi m'embaucher ?",
+    "dialogTitle": "Travaillons ensemble",
+    "hybridPitch": "Ingénieur informatique orienté livraison : transforme les specs en incréments produit fiables et mesurables.",
+    "chipDelivery": "SCRUM",
+    "chipQuality": "Propre + testé",
+    "chipCollab": "Comms claires",
+    "chipGrowth": "Apprentissage continu",
+    "chipInnovation": "Augmenté par l'IA",
+    "verbs": "Concevoir,Construire,Améliorer,Scaler",
+    "paragraph1": "J'apporte une solide base technique, un esprit de résolution de problèmes et un engagement à livrer des solutions de qualité qui répondent aux vrais besoins des utilisateurs.",
+    "paragraph2": "Je suis étudiant en ingénierie logicielle avec une expérience pratique en développement acquise lors de mon apprentissage et de mes stages. Je suis passionné par l'apprentissage et l'application de technologies modernes pour créer des solutions significatives.",
+    "paragraph3": "Doté d'une grande capacité d'adaptation et d'une soif d'apprentissage constant, je travaille efficacement en autonomie tout en relevant les défis avec enthousiasme. Que ce soit pour un poste d'ingénieur ou un apprentissage enrichissant, n'hésitez pas à me contacter.",
+    "whyDifferentTitle": "Ce qui me différencie ?",
+    "whyDifferent": "Je privilégie l'écriture de code robuste et évolutif tout en concevant des interfaces utilisateur intuitives. Mon approche alliant expertise technique et vision produit me permet de développer des solutions performantes et engageantes.",
+    "preferencesTitle": "Mes préférences",
+    "preference1": "Culture d'entreprise exceptionnelle. Je valorise les environnements qui favorisent la croissance, la collaboration et l'innovation.",
+    "preference2": "Remote-friendly. Je crois au pouvoir des arrangements de travail flexibles et de la collaboration asynchrone.",
+    "preference3": "Projets porteurs de sens. Je suis passionné par le travail sur des produits qui font une vraie différence dans la vie des gens."
   }
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import { HiLightBulb, HiPlus, HiUsers } from "react-icons/hi";
 import { HiChatBubbleLeftRight, HiClock } from "react-icons/hi2";
 import { MdGroups } from "react-icons/md";

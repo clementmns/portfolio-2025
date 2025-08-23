@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/select";
 import { useTranslations } from "next-intl";
 import { Font } from "@/types/fonts";
-import { fontClassMap } from "../../lib/fonts";
+import { fontClassMap } from "@/lib/fonts";
 
 export function FontSelect() {
   const t = useTranslations("Header");

@@ -38,7 +38,7 @@ export default function TrainingsCard() {
   return (
     <Card>
       <CardHeader className="justify-start flex items-center gap-3">
-        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/30 dark:bg-primary/20">
+        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/30 dark:bg-primary/20 shrink-0">
           <HiAcademicCap size={16} className="text-primary" />
         </div>
         <CardTitle>{t("title")}</CardTitle>
