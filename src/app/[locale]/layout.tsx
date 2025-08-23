@@ -13,6 +13,8 @@ import Background from "@/components/layouts/background";
 import Footer from "@/components/layouts/footer";
 import StructuredData from "@/components/seo/structured-data";
 import DynamicFavicon from "@/components/seo/dynamic-favicon";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -102,6 +104,8 @@ export default async function RootLayout({
         <StructuredData />
       </head>
       <body className={`${fontClassMap[font]} antialiased ${season}`}>
+        <SpeedInsights />
+        <Analytics />
         <NextIntlClientProvider>
           <ThemeProvider initialTheme={theme}>
             <Background />
