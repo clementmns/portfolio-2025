@@ -74,8 +74,8 @@
     }
   },
   "About": {
-    "title": "About",
-    "about": "Passionate full-stack developer with a strong foundation in modern web technologies. I enjoy building scalable applications and learning new technologies to solve complex problems."
+    "title": "Get to know me",
+    "about": "Product‑oriented full‑stack developer, I like turning sometimes fuzzy needs into concrete solutions. My balance comes as much from the rigor of code as from what grounds me off‑screen: Kung Fu for discipline and hiking for perspective. I value environments where impact is measured, learning is shared, and there is a human behind every feature."
   },
   "Certifications": {
     "title": "Certifications",
@@ -97,7 +97,7 @@
     "timeManagement": "Time Management"
   },
   "Hiring": {
-    "title": "Why hire me?",
+    "title": "About",
     "dialogTitle": "Let's work together",
     "hybridPitch": "Shipping-focused software engineer: turn specs into reliable, measurable product increments.",
     "chipDelivery": "SCRUM",

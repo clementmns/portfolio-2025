@@ -25,9 +25,9 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full" aria-labelledby="hero-title">
-      <div className="flex flex-col gap-6 w-full sm:flex-row sm:items-start sm:justify-between">
-        <div className="flex flex-col max-w-none sm:max-w-xl lg:max-w-2xl order-1 items-center sm:items-start">
-          <Avatar className="size-42 sm:size-24 md:size-32 mb-3 sm:mb-4 rounded-xl">
+      <div className="flex flex-col gap-6 w-full lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col max-w-none lg:flex-1 lg:pr-12 order-1 items-center sm:items-start lg:order-1">
+          <Avatar className="size-42 sm:size-24 md:size-32 lg:hidden mb-3 sm:mb-4 rounded-xl">
             <AvatarImage
               src="/me.webp"
               className="object-cover"
@@ -37,11 +37,11 @@ export default function HeroSection() {
           </Avatar>
           <h1
             id="hero-title"
-            className="font-bold text-4xl leading-tight tracking-tight sm:text-4xl md:text-5xl"
+            className="font-bold text-4xl leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
           >
             {t("heroTitle")}
           </h1>
-          <h2 className="mt-4 text-lg leading-relaxed max-w-prose">
+          <h2 className="mt-4 text-lg lg:text-xl leading-relaxed max-w-none lg:max-w-4xl">
             {t("iam")}
             <span className="font-semibold">{t("job")}</span>
             {t("experience")}
@@ -172,6 +172,18 @@ export default function HeroSection() {
               </Button>
             </div>
           </div>
+        </div>
+
+        {/* Desktop Avatar - Right Side */}
+        <div className="hidden lg:flex lg:flex-col lg:items-center lg:justify-center order-2">
+          <Avatar className="size-48 xl:size-56 rounded-2xl">
+            <AvatarImage
+              src="/me.webp"
+              className="object-cover"
+              alt="Profile picture of @clementmns"
+            />
+            <AvatarFallback>✱</AvatarFallback>
+          </Avatar>
         </div>
       </div>
     </section>

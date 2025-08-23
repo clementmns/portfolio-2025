@@ -73,8 +73,8 @@
     "opquast": "875/1000 - Assurance Qualité"
   },
   "About": {
-    "title": "À Propos",
-    "about": "Développeur full-stack passionné avec une solide base en technologies web modernes. J'aime créer des applications évolutives et apprendre de nouvelles technologies pour résoudre des problèmes complexes."
+    "title": "En savoir plus",
+    "about": "Développeur full‑stack orienté produit, j’aime transformer des besoins parfois flous en solutions concrètes. Mon équilibre vient autant de la rigueur du code que de ce qui m’ancre hors écran : Kung-fu pour la discipline et la randonnée pour le recul. J’apprécie les environnements où l’on mesure l’impact, on partage l’apprentissage et on garde de l’humain derrière chaque fonctionnalité."
   },
   "Current": {
     "title": "Maintenant",
@@ -97,7 +97,7 @@
     "timeManagement": "Gestion du temps"
   },
   "Hiring": {
-    "title": "Pourquoi m'embaucher ?",
+    "title": "À Propos",
     "dialogTitle": "Travaillons ensemble",
     "hybridPitch": "Ingénieur informatique orienté livraison : transforme les specs en incréments produit fiables et mesurables.",
     "chipDelivery": "SCRUM",
