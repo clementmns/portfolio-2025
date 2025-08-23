@@ -41,12 +41,23 @@ import {
   DrawerTrigger,
 } from "../../ui/drawer";
 
+type Skill = {
+  name: string;
+  icon: React.ComponentType<{ className?: string }>;
+  color: string;
+};
+
+type SkillCategory = {
+  title: string;
+  skills: Skill[];
+};
+
 export default function SkillsCardDialog() {
   const t = useTranslations("Skills");
   const tg = useTranslations("Generic");
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
-  const skillCategories = [
+  const skillCategories: SkillCategory[] = [
     {
       title: t("languages"),
       skills: [

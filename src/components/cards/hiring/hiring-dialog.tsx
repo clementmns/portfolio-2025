@@ -45,7 +45,7 @@ export default function HiringDialog() {
 
           <div className="space-y-2">
             <h4 className="font-medium text-lg text-foreground flex items-center gap-2">
-              <HiRocketLaunch className="w-4 h-4 text-blue-500" />
+              <HiRocketLaunch className="w-4 h-4 text-primary" />
               {t("preferencesTitle")}
             </h4>
             <ul className="space-y-2 text-muted-foreground">

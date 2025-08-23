@@ -10,10 +10,15 @@ import {
 } from "react-icons/hi2";
 import HiringDialog from "./hiring-dialog";
 
+type Chip = {
+  icon: React.ComponentType<{ className?: string }>;
+  key: string;
+};
+
 export default function HiringCard() {
   const t = useTranslations("Hiring");
 
-  const chips = [
+  const chips: Chip[] = [
     { icon: HiArrowTrendingUp, key: "chipDelivery" },
     { icon: HiCodeBracket, key: "chipQuality" },
     { icon: HiUserGroup, key: "chipCollab" },

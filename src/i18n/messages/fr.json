@@ -110,5 +110,11 @@
     "preference1": "Culture d'entreprise exceptionnelle. Je valorise les environnements qui favorisent la croissance, la collaboration et l'innovation.",
     "preference2": "Remote-friendly. Je crois au pouvoir des arrangements de travail flexibles et de la collaboration asynchrone.",
     "preference3": "Projets porteurs de sens. Je suis passionné par le travail sur des produits qui font une vraie différence dans la vie des gens."
+  },
+  "Tools": {
+    "title": "Outils",
+    "environment": "Environnements",
+    "ide": "IDE",
+    "tooling": "Logiciels"
   }
 }

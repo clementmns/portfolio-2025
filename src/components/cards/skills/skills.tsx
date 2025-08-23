@@ -12,10 +12,16 @@ import {
 import { Badge } from "@/components/ui/badge";
 import SkillsCardDialog from "./skills-dialog";
 
+type Skill = {
+  name: string;
+  icon: React.ComponentType<{ className?: string }>;
+  color: string;
+};
+
 export default function SkillsCard() {
   const t = useTranslations("Skills");
 
-  const hypeStack = [
+  const hypeStack: Skill[] = [
     { name: "TypeScript", icon: SiTypescript, color: "text-blue-500" },
     { name: "React.js", icon: SiReact, color: "text-blue-400" },
     {

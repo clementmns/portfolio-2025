@@ -110,5 +110,11 @@
     "preference1": "Amazing work culture. I value environments that promote growth, collaboration, and innovation.",
     "preference2": "Remote-friendly. I believe in the power of flexible work arrangements and asynchronous collaboration.",
     "preference3": "Meaningful projects. I'm passionate about working on products that make a real difference in people's lives."
+  },
+  "Tools": {
+    "title": "Tools",
+    "environment": "Environments",
+    "ide": "IDE",
+    "tooling": "Softwares"
   }
 }
