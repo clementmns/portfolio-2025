@@ -33,7 +33,7 @@ export default function HeroSection() {
               className="object-cover"
               alt="Profile picture of @clementmns"
             />
-            <AvatarFallback>CO</AvatarFallback>
+            <AvatarFallback>✱</AvatarFallback>
           </Avatar>
           <h1
             id="hero-title"

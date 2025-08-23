@@ -12,8 +12,14 @@ import ThemeProvider from "@/components/providers/theme-provider";
 import Background from "@/components/layouts/background";
 import Footer from "@/components/layouts/footer";
 import StructuredData from "@/components/seo/structured-data";
+import DynamicFavicon from "@/components/seo/dynamic-favicon";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NODE_ENV === "production"
+      ? "https://clementomnes.dev"
+      : "http://localhost:3000"
+  ),
   title: {
     default: "Clément Omnès - Software Engineer & Full-Stack Developer",
     template: "%s | Clément Omnès",
@@ -92,6 +98,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        <DynamicFavicon />
         <StructuredData />
       </head>
       <body className={`${fontClassMap[font]} antialiased ${season}`}>
