@@ -28,25 +28,32 @@ export default function ExperiencesCard() {
 
   const experiences: Experience[] = [
     {
-      company: "R3mScore",
+      company: t("1.company"),
       role: t("1.role"),
       type: t("apprenticeship"),
       location: t("remote"),
       link: "https://www.r3mscore.com/",
       logo: "/companies/r3mscore.jpg",
-      start: "2024-09-01",
-      stack: ["React", "Java", "TypeScript", "Spring", "Docker", "MySQL"],
+      start: t("1.start"),
+      stack: [
+        t("1.react"),
+        t("1.java"),
+        t("1.typescript"),
+        t("1.spring"),
+        t("1.docker"),
+        t("1.mysql"),
+      ],
     },
     {
-      company: "R3mScore",
+      company: t("2.company"),
       role: t("2.role"),
       type: t("internship"),
       location: t("remote"),
       link: "https://www.r3mscore.com/",
       logo: "/companies/r3mscore.jpg",
-      start: "2024-03-01",
-      end: "2024-06-01",
-      stack: ["React", "JavaScript", "Git"],
+      start: t("2.start"),
+      end: t("2.end"),
+      stack: [t("2.react"), t("2.javascript"), t("2.git")],
     },
   ];
 

@@ -54,10 +54,25 @@
     "remote": "Remote, France",
     "title": "Experiences",
     "1": {
-      "role": "FullStack Developer"
+      "company": "R3mScore",
+      "role": "FullStack Developer",
+      "start": "2024-09-01",
+      "end": null,
+      "react": "React",
+      "java": "Java",
+      "typescript": "TypeScript",
+      "spring": "Spring",
+      "docker": "Docker",
+      "mysql": "MySQL"
     },
     "2": {
-      "role": "Front-End Developer"
+      "company": "R3mScore",
+      "role": "Front-End Developer",
+      "start": "2024-03-01",
+      "end": "2024-06-01",
+      "react": "React",
+      "javascript": "JavaScript",
+      "git": "Git"
     }
   },
   "Trainings": {
@@ -65,12 +80,16 @@
     "1": {
       "school": "CESI",
       "program": "Software Engineering degree",
-      "location": "Rouen, France"
+      "location": "Rouen, France",
+      "start": "2025-10-06",
+      "end": "2028-07-31"
     },
     "2": {
       "school": "University of Rouen",
       "program": "BUT in Multimedia and Internet Professions",
-      "location": "Elbeuf, France"
+      "location": "Elbeuf, France",
+      "start": "2022-09-01",
+      "end": "2025-07-31"
     }
   },
   "About": {
@@ -94,7 +113,21 @@
     "teamWorking": "Team Working",
     "forceOfProposal": "Force of Proposal",
     "stressManagement": "Stress Management",
-    "timeManagement": "Time Management"
+    "timeManagement": "Time Management",
+    "TypeScript": "TypeScript",
+    "JavaScript": "JavaScript",
+    "PHP": "PHP",
+    "Spring": "Spring",
+    "TailwindCSS": "Tailwind CSS",
+    "MySQL": "MySQL",
+    "C#": "C#",
+    "Git": "Git",
+    "SCRUM": "SCRUM",
+    "Reactjs": "React.js",
+    "Nextjs": "Next.js",
+    "Nestjs": "Nest.js",
+    "Docker": "Docker",
+    "Java": "Java"
   },
   "Hiring": {
     "title": "About",
@@ -121,18 +154,44 @@
     "selenite": {
       "name": "Selenite: Lost Contact",
       "role": "Lead Developer",
-      "description": "Space shooter set on the Moon where players must survive against increasingly difficult waves of enemies."
+      "description": "Space shooter set on the Moon where players must survive against increasingly difficult waves of enemies.",
+      "year": "2024",
+      "unity": "Unity",
+      "csharp": "C#"
     },
     "alm": {
       "name": "ALM Voting App",
       "role": "Software Engineer",
-      "description": "Real-time voting application for basketball supporters to vote for best player of the match."
+      "description": "Real-time voting application for basketball supporters to vote for best player of the match.",
+      "year": "2023",
+      "nextjs": "Next.js",
+      "tailwind": "Tailwind CSS",
+      "drizzle": "Drizzle ORM",
+      "mysql": "MySQL"
     }
   },
   "Tools": {
     "title": "Tools",
     "environment": "Environments",
     "ide": "IDE",
-    "tooling": "Softwares"
+    "tooling": "Softwares",
+    "macOS": "macOS",
+    "Linux": "Linux",
+    "Windows": "Windows",
+    "VSCode": "VS Code",
+    "Intellij": "IntelliJ IDEA",
+    "Terminal": "Terminal",
+    "Notion": "Notion",
+    "Jira": "Jira"
+  },
+  "Chatbot": {
+    "title": "Assistant",
+    "hello": "Hi 👋 ! I'm the Clément's portfolio assistant. How can I help you today?",
+    "regenerate": "Regenerate",
+    "outOfTokens": "Oops, I'm out of free tokens. Please come back later.",
+    "error": "An error occurred. Please try again",
+    "suggestion1": "See his projects 🛠️",
+    "suggestion2": "Learn more about Clément 🥸",
+    "suggestion3": "What is his current role 💼?"
   }
 }

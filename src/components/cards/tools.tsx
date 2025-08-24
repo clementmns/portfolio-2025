@@ -26,31 +26,35 @@ export default function ToolsCard() {
       label: t("environment"),
       items: [
         {
-          name: "macOS",
+          name: t("macOS"),
           icon: FaApple,
           color: "text-zinc-900 dark:text-zinc-100",
         },
-        { name: "Linux", icon: FaLinux, color: "text-orange-500" },
-        { name: "Windows", icon: FaWindows, color: "text-sky-600" },
+        { name: t("Linux"), icon: FaLinux, color: "text-orange-500" },
+        { name: t("Windows"), icon: FaWindows, color: "text-sky-600" },
       ],
     },
     {
       label: t("ide"),
       items: [
-        { name: "VS Code", icon: BiLogoVisualStudio, color: "text-sky-600" },
+        { name: t("VSCode"), icon: BiLogoVisualStudio, color: "text-sky-600" },
         {
-          name: "IntelliJ IDEA",
+          name: t("Intellij"),
           icon: SiIntellijidea,
           color: "text-black-600",
         },
-        { name: "Terminal", icon: IoTerminal, color: "text-zinc-500" },
+        { name: t("Terminal"), icon: IoTerminal, color: "text-zinc-500" },
       ],
     },
     {
       label: t("tooling"),
       items: [
-        { name: "Notion", icon: SiNotion, color: "text-black dark:text-white" },
-        { name: "Jira", icon: SiJira, color: "text-sky-600" },
+        {
+          name: t("Notion"),
+          icon: SiNotion,
+          color: "text-black dark:text-white",
+        },
+        { name: t("Jira"), icon: SiJira, color: "text-sky-600" },
       ],
     },
   ];

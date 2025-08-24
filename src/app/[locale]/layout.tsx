@@ -11,6 +11,7 @@ import { getCurrentSeason } from "@/lib/current-season";
 import ThemeProvider from "@/components/providers/theme-provider";
 import Background from "@/components/layouts/background";
 import Footer from "@/components/layouts/footer";
+import Chatbot from "@/components/chatbot/chatbot";
 import StructuredData from "@/components/seo/structured-data";
 import DynamicFavicon from "@/components/seo/dynamic-favicon";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -110,7 +111,8 @@ export default async function RootLayout({
           <ThemeProvider initialTheme={theme}>
             <Background />
             <Header />
-            {children}
+            <main>{children}</main>
+            <Chatbot />
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>

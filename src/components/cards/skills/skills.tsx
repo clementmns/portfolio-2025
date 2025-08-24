@@ -25,16 +25,16 @@ export default function SkillsCard() {
   const t = useTranslations("Skills");
 
   const hypeStack: Skill[] = [
-    { name: "TypeScript", icon: SiTypescript, color: "text-blue-500" },
-    { name: "React.js", icon: SiReact, color: "text-blue-400" },
+    { name: t("TypeScript"), icon: SiTypescript, color: "text-blue-500" },
+    { name: t("Reactjs"), icon: SiReact, color: "text-blue-400" },
     {
-      name: "Next.js",
+      name: t("Nextjs"),
       icon: SiNextdotjs,
       color: "text-gray-900 dark:text-white",
     },
-    { name: "Nest.js", icon: SiNestjs, color: "text-red-600" },
-    { name: "Docker", icon: SiDocker, color: "text-blue-500" },
-    { name: "Java", icon: SiOpenjdk, color: "text-red-500" },
+    { name: t("Nestjs"), icon: SiNestjs, color: "text-red-600" },
+    { name: t("Docker"), icon: SiDocker, color: "text-blue-500" },
+    { name: t("Java"), icon: SiOpenjdk, color: "text-red-500" },
   ];
 
   return (

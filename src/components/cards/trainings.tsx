@@ -25,8 +25,8 @@ export default function TrainingsCard() {
       location: t("1.location"),
       link: "https://www.cesi.fr/formation/ingenieur-e-informatique-cursus-en-3-ans-par-lapprentissage-2513617/",
       logo: "/schools/cesi.png",
-      start: "2025-10-06",
-      end: "2028-07-31",
+      start: t("1.start"),
+      end: t("1.end"),
     },
     {
       school: t("2.school"),
@@ -34,8 +34,8 @@ export default function TrainingsCard() {
       location: t("2.location"),
       link: "https://formation.univ-rouen.fr/fr/catalogue-de-l-offre-de-formation/but-BUT/but-metiers-du-multimedia-et-de-l-internet-L4S5PA8M.html",
       logo: "/schools/univ-rouen.png",
-      start: "2022-09-01",
-      end: "2025-07-31",
+      start: t("2.start"),
+      end: t("2.end"),
     },
   ];
 

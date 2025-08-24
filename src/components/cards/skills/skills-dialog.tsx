@@ -63,34 +63,34 @@ export default function SkillsCardDialog() {
     {
       title: t("languages"),
       skills: [
-        { name: "TypeScript", icon: SiTypescript, color: "text-blue-500" },
-        { name: "JavaScript", icon: SiJavascript, color: "text-yellow-500" },
-        { name: "PHP", icon: SiPhp, color: "text-purple-900" },
-        { name: "Java", icon: SiOpenjdk, color: "text-red-500" },
-        { name: "C#", icon: SiSharp, color: "text-purple-600" },
+        { name: t("TypeScript"), icon: SiTypescript, color: "text-blue-500" },
+        { name: t("JavaScript"), icon: SiJavascript, color: "text-yellow-500" },
+        { name: t("PHP"), icon: SiPhp, color: "text-purple-900" },
+        { name: t("Java"), icon: SiOpenjdk, color: "text-red-500" },
+        { name: t("C#"), icon: SiSharp, color: "text-purple-600" },
       ],
     },
     {
       title: t("frameworks"),
       skills: [
-        { name: "React.js", icon: SiReact, color: "text-blue-400" },
+        { name: t("Reactjs"), icon: SiReact, color: "text-blue-400" },
         {
-          name: "Next.js",
+          name: t("Nextjs"),
           icon: SiNextdotjs,
           color: "text-gray-900 dark:text-white",
         },
-        { name: "Nest.js", icon: SiNestjs, color: "text-red-600" },
-        { name: "Spring Boot", icon: SiSpring, color: "text-green-700" },
-        { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400" },
+        { name: t("Nestjs"), icon: SiNestjs, color: "text-red-600" },
+        { name: t("Spring"), icon: SiSpring, color: "text-green-700" },
+        { name: t("TailwindCSS"), icon: SiTailwindcss, color: "text-cyan-400" },
       ],
     },
     {
       title: t("technical"),
       skills: [
-        { name: "MySQL", icon: SiMysql, color: "text-blue-600" },
-        { name: "Git", icon: SiGit, color: "text-orange-500" },
-        { name: "Docker", icon: SiDocker, color: "text-blue-500" },
-        { name: "SCRUM", icon: MdGroups, color: "text-blue-700" },
+        { name: t("MySQL"), icon: SiMysql, color: "text-blue-600" },
+        { name: t("Git"), icon: SiGit, color: "text-orange-500" },
+        { name: t("Docker"), icon: SiDocker, color: "text-blue-500" },
+        { name: t("SCRUM"), icon: MdGroups, color: "text-blue-700" },
       ],
     },
     {
