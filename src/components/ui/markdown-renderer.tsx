@@ -1,5 +1,4 @@
-/* eslint-disable */
-import React, { Suspense } from "react";
+import React, { Suspense, JSX } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -184,7 +183,7 @@ function withClass(Tag: keyof JSX.IntrinsicElements, classes: string) {
   const Component = ({ node, ...props }: any) => (
     <Tag className={classes} {...props} />
   );
-  Component.displayName = Tag;
+  Component.displayName = Tag as string;
   return Component;
 }
 
