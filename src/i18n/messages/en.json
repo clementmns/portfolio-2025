@@ -170,6 +170,18 @@
       "tailwind": "Tailwind CSS",
       "drizzle": "Drizzle ORM",
       "mysql": "MySQL"
+    },
+    "weavenotes": {
+      "name": "WeaveNotes",
+      "role": "Software Engineer",
+      "description": "Real-time collaborative note-taking web application in markdown.",
+      "year": "2025",
+      "nextjs": "Next.js",
+      "tailwind": "Tailwind CSS",
+      "typescript": "TypeScript",
+      "supabase": "Supabase",
+      "postgresql": "PostgreSQL",
+      "websockets": "WebSockets"
     }
   },
   "Tools": {

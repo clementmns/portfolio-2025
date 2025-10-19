@@ -163,13 +163,25 @@
     },
     "alm": {
       "name": "ALM Voting App",
-      "role": "Ingénieur Logiciel",
+      "role": "Ingénieur Informatique",
       "description": "Application de vote en temps réel pour les supporters de basketball pour voter pour le meilleur joueur du match.",
       "year": "2023",
       "nextjs": "Next.js",
       "tailwind": "Tailwind CSS",
       "drizzle": "Drizzle ORM",
       "mysql": "MySQL"
+    },
+    "weavenotes": {
+      "name": "WeaveNotes",
+      "role": "Ingénieur Informatique",
+      "description": "Application web de prise de notes collaborative en temps réel en markdown.",
+      "year": "2025",
+      "nextjs": "Next.js",
+      "tailwind": "Tailwind CSS",
+      "typescript": "TypeScript",
+      "supabase": "Supabase",
+      "postgresql": "PostgreSQL",
+      "websockets": "WebSockets"
     }
   },
   "Tools": {

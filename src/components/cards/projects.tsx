@@ -31,6 +31,24 @@ export default function ProjectsCard() {
 
   const projects: Project[] = [
     {
+      name: t("weavenotes.name"),
+      role: [t("weavenotes.role")],
+      description: t("weavenotes.description"),
+      stack: [
+        t("weavenotes.nextjs"),
+        t("weavenotes.websockets"),
+        t("weavenotes.typescript"),
+        t("weavenotes.tailwind"),
+        t("weavenotes.supabase"),
+        t("weavenotes.postgresql"),
+      ],
+      logo: "/projects/weavenotes.png",
+      link: "https://notes.clementomnes.dev/",
+      repoLink: "https://github.com/clementmns/weave-note",
+      active: true,
+      year: t("weavenotes.year"),
+    },
+    {
       name: t("selenite.name"),
       role: [t("selenite.role")],
       description: t("selenite.description"),
@@ -53,6 +71,7 @@ export default function ProjectsCard() {
       ],
       logo: "/projects/alm.svg",
       link: "https://alm-app.vercel.app/",
+      active: true,
       year: t("alm.year"),
     },
   ];
