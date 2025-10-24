@@ -54,7 +54,6 @@ export default function ProjectsCard() {
       description: t("selenite.description"),
       stack: [t("selenite.unity"), t("selenite.csharp")],
       logo: "/projects/selenite.png",
-      link: "https://selenite.live/",
       repoLink: "https://github.com/selenite-live/",
       active: true,
       year: t("selenite.year"),
